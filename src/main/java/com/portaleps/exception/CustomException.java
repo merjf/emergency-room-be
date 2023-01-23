@@ -2,7 +2,7 @@ package com.portaleps.exception;
 
 import org.springframework.http.HttpStatus;
 
-public class CustomException extends RuntimeException {
+public class CustomException extends RuntimeException  {
 
     private static final long serialVersionUID = 1L;
 

@@ -1,6 +1,6 @@
 package com.portaleps.repository;
 
-import com.portaleps.model.User;
+import com.portaleps.model.entity.User;
 
 import javax.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;

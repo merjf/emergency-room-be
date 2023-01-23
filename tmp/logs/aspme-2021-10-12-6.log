@@ -1,0 +1,229 @@
+2021-10-12 21:40:03.595  INFO MBPdiFrancesco --- [           main] c.p.PortalepsApplication                 : Starting PortalepsApplication using Java 11.0.12 on MBPdiFrancesco with PID 27581 (/Users/merjf/Documents/Work/Projects/Messina/Pronto Soccorso Messina/aspme-ps-repo/target/classes started by merjf in /Users/merjf/Documents/Work/Projects/Messina/Pronto Soccorso Messina/aspme-ps-repo)
+2021-10-12 21:40:03.608  INFO MBPdiFrancesco --- [           main] c.p.PortalepsApplication                 : No active profile set, falling back to default profiles: default
+2021-10-12 21:40:04.525  INFO MBPdiFrancesco --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-12 21:40:04.605  INFO MBPdiFrancesco --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 3 JPA repository interfaces.
+2021-10-12 21:40:04.981  INFO MBPdiFrancesco --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@7c281eb8' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-12 21:40:04.986  INFO MBPdiFrancesco --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-12 21:40:05.318  INFO MBPdiFrancesco --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-10-12 21:40:05.330  INFO MBPdiFrancesco --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2021-10-12 21:40:05.331  INFO MBPdiFrancesco --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-10-12 21:40:05.331  INFO MBPdiFrancesco --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-10-12 21:40:05.440  INFO MBPdiFrancesco --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-10-12 21:40:05.441  INFO MBPdiFrancesco --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1766 ms
+2021-10-12 21:40:05.703  INFO MBPdiFrancesco --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-12 21:40:05.785  INFO MBPdiFrancesco --- [           main] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-12 21:40:05.996  INFO MBPdiFrancesco --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-12 21:40:06.139  INFO MBPdiFrancesco --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-10-12 21:40:06.144  WARN MBPdiFrancesco --- [           main] c.z.h.u.DriverDataSource                 : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-10-12 21:40:06.715  INFO MBPdiFrancesco --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-10-12 21:40:06.768  INFO MBPdiFrancesco --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-10-12 21:40:07.653  INFO MBPdiFrancesco --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-12 21:40:07.664  INFO MBPdiFrancesco --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 21:40:08.285  WARN MBPdiFrancesco --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-12 21:40:08.334  INFO MBPdiFrancesco --- [           main] c.p.s.WebSecurityConfig                  : authenticationManagerBean() - start
+2021-10-12 21:40:08.334  INFO MBPdiFrancesco --- [           main] c.p.s.WebSecurityConfig                  : authenticationManagerBean() - end
+2021-10-12 21:40:08.525  INFO MBPdiFrancesco --- [           main] c.p.s.WebSecurityConfig                  : configure(http) - start
+2021-10-12 21:40:08.528  INFO MBPdiFrancesco --- [           main] c.p.s.JwtTokenFilterConfigurer           : JwtTokenFilterConfigurer() - start
+2021-10-12 21:40:08.528  INFO MBPdiFrancesco --- [           main] c.p.s.JwtTokenFilterConfigurer           : JwtTokenFilterConfigurer() - end
+2021-10-12 21:40:08.529  INFO MBPdiFrancesco --- [           main] c.p.s.WebSecurityConfig                  : configure(http) - end
+2021-10-12 21:40:08.529  INFO MBPdiFrancesco --- [           main] c.p.s.WebSecurityConfig                  : configure(web) - start
+2021-10-12 21:40:08.530  INFO MBPdiFrancesco --- [           main] c.p.s.WebSecurityConfig                  : configure(http) - end
+2021-10-12 21:40:08.530  INFO MBPdiFrancesco --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/v2/api-docs'] with []
+2021-10-12 21:40:08.531  INFO MBPdiFrancesco --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/swagger-resources/**'] with []
+2021-10-12 21:40:08.531  INFO MBPdiFrancesco --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/swagger-ui.html'] with []
+2021-10-12 21:40:08.531  INFO MBPdiFrancesco --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/configuration/**'] with []
+2021-10-12 21:40:08.531  INFO MBPdiFrancesco --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/webjars/**'] with []
+2021-10-12 21:40:08.531  INFO MBPdiFrancesco --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/auth/login'] with []
+2021-10-12 21:40:08.532  INFO MBPdiFrancesco --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/h2-console/**/**'] with []
+2021-10-12 21:40:08.605  INFO MBPdiFrancesco --- [           main] c.p.s.WebSecurityConfig                  : addCorsMappings() - start
+2021-10-12 21:40:08.607  INFO MBPdiFrancesco --- [           main] c.p.s.WebSecurityConfig                  : addCorsMappings() - end
+2021-10-12 21:40:08.747  INFO MBPdiFrancesco --- [           main] c.p.s.JwtTokenFilterConfigurer           : configure() - start
+2021-10-12 21:40:08.748  INFO MBPdiFrancesco --- [           main] c.p.s.JwtTokenFilterConfigurer           : configure() - end
+2021-10-12 21:40:08.748  INFO MBPdiFrancesco --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e65c4d, org.springframework.security.web.context.SecurityContextPersistenceFilter@2bd158ea, org.springframework.security.web.header.HeaderWriterFilter@72851503, org.springframework.web.filter.CorsFilter@6b888692, org.springframework.security.web.authentication.logout.LogoutFilter@218fc40d, com.portaleps.security.JwtTokenFilter@6414eb98, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d1f168, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@260043d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@61a17f3, org.springframework.security.web.session.SessionManagementFilter@3dcf6026, org.springframework.security.web.access.ExceptionTranslationFilter@5134a7d6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@768f2398]
+2021-10-12 21:40:08.987  INFO MBPdiFrancesco --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2021-10-12 21:40:09.024  INFO MBPdiFrancesco --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-10-12 21:40:09.035  INFO MBPdiFrancesco --- [           main] c.p.PortalepsApplication                 : Started PortalepsApplication in 6.5 seconds (JVM running for 8.287)
+2021-10-12 21:40:09.238  INFO MBPdiFrancesco --- [           main] c.p.PortalepsApplication                 : initFolders() - start
+2021-10-12 21:40:09.239  INFO MBPdiFrancesco --- [           main] c.p.PortalepsApplication                 : initFolders() - folders created
+2021-10-12 21:40:09.239  INFO MBPdiFrancesco --- [           main] c.p.PortalepsApplication                 : initFolders() - end
+2021-10-12 21:40:42.800  INFO MBPdiFrancesco --- [nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-12 21:40:42.801  INFO MBPdiFrancesco --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-10-12 21:40:42.803  INFO MBPdiFrancesco --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 2 ms
+2021-10-12 21:40:42.924  INFO MBPdiFrancesco --- [nio-8080-exec-2] c.p.c.AuthController                     : login() - start
+2021-10-12 21:40:42.937  INFO MBPdiFrancesco --- [nio-8080-exec-2] c.p.c.AuthController                     : Richieta con body [{"username":"admin","password":"admin"}]
+2021-10-12 21:40:42.938  INFO MBPdiFrancesco --- [nio-8080-exec-2] c.p.h.UserHelper                         : login() - start
+2021-10-12 21:40:43.263  INFO MBPdiFrancesco --- [nio-8080-exec-2] c.p.h.UserHelper                         : loadUserByUsername() - start
+2021-10-12 21:40:43.265  INFO MBPdiFrancesco --- [nio-8080-exec-2] c.p.h.UserHelper                         : loadUserByUsername() - end
+2021-10-12 21:40:43.645  INFO MBPdiFrancesco --- [nio-8080-exec-2] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-12 21:40:43.668  INFO MBPdiFrancesco --- [nio-8080-exec-2] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-12 21:40:43.669  INFO MBPdiFrancesco --- [nio-8080-exec-2] c.p.h.UserHelper                         : login() - end
+2021-10-12 21:40:43.673  INFO MBPdiFrancesco --- [nio-8080-exec-2] c.p.s.UserService                        : getUserDTO() - start
+2021-10-12 21:40:43.684  INFO MBPdiFrancesco --- [nio-8080-exec-2] c.p.s.UserService                        : toDto() - start
+2021-10-12 21:40:43.685  INFO MBPdiFrancesco --- [nio-8080-exec-2] c.p.s.UserService                        : toDto() - end
+2021-10-12 21:40:43.725  INFO MBPdiFrancesco --- [nio-8080-exec-2] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-12 21:40:43.750  INFO MBPdiFrancesco --- [nio-8080-exec-2] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-12 21:40:43.750  INFO MBPdiFrancesco --- [nio-8080-exec-2] c.p.c.AuthController                     : login() - login success
+2021-10-12 21:40:43.750  INFO MBPdiFrancesco --- [nio-8080-exec-2] c.p.c.AuthController                     : login() - end
+2021-10-12 21:40:43.836  INFO MBPdiFrancesco --- [nio-8080-exec-4] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-12 21:40:43.838  INFO MBPdiFrancesco --- [nio-8080-exec-4] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-12 21:40:43.839  INFO MBPdiFrancesco --- [nio-8080-exec-4] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-12 21:40:43.853  INFO MBPdiFrancesco --- [nio-8080-exec-4] c.p.c.ArchiveController                  : getMyArchives() - start
+2021-10-12 21:40:43.853  INFO MBPdiFrancesco --- [nio-8080-exec-4] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 21:40:43.853  INFO MBPdiFrancesco --- [nio-8080-exec-4] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 21:40:43.863  INFO MBPdiFrancesco --- [nio-8080-exec-4] c.p.c.ArchiveController                  : Richieta da utente [admin]
+2021-10-12 21:40:43.863  INFO MBPdiFrancesco --- [nio-8080-exec-4] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-12 21:40:43.864  INFO MBPdiFrancesco --- [nio-8080-exec-4] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 21:40:43.864  INFO MBPdiFrancesco --- [nio-8080-exec-4] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 21:40:43.874  INFO MBPdiFrancesco --- [nio-8080-exec-4] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-12 21:40:43.874  INFO MBPdiFrancesco --- [nio-8080-exec-4] c.p.c.ArchiveController                  : getMyArchives() - end
+2021-10-12 21:40:43.886  INFO MBPdiFrancesco --- [nio-8080-exec-4] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-12 21:40:44.194  INFO MBPdiFrancesco --- [nio-8080-exec-5] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-12 21:40:44.195  INFO MBPdiFrancesco --- [nio-8080-exec-5] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-12 21:40:44.196  INFO MBPdiFrancesco --- [nio-8080-exec-5] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-12 21:40:44.197  INFO MBPdiFrancesco --- [nio-8080-exec-5] c.p.c.ArchiveController                  : getMyArchives() - start
+2021-10-12 21:40:44.197  INFO MBPdiFrancesco --- [nio-8080-exec-5] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 21:40:44.197  INFO MBPdiFrancesco --- [nio-8080-exec-5] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 21:40:44.201  INFO MBPdiFrancesco --- [nio-8080-exec-5] c.p.c.ArchiveController                  : Richieta da utente [admin]
+2021-10-12 21:40:44.201  INFO MBPdiFrancesco --- [nio-8080-exec-5] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-12 21:40:44.201  INFO MBPdiFrancesco --- [nio-8080-exec-5] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 21:40:44.202  INFO MBPdiFrancesco --- [nio-8080-exec-5] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 21:40:44.208  INFO MBPdiFrancesco --- [nio-8080-exec-5] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-12 21:40:44.208  INFO MBPdiFrancesco --- [nio-8080-exec-5] c.p.c.ArchiveController                  : getMyArchives() - end
+2021-10-12 21:40:44.210  INFO MBPdiFrancesco --- [nio-8080-exec-5] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-12 21:40:44.259  INFO MBPdiFrancesco --- [nio-8080-exec-6] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-12 21:40:44.260  INFO MBPdiFrancesco --- [nio-8080-exec-6] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-12 21:40:44.261  INFO MBPdiFrancesco --- [nio-8080-exec-6] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-12 21:40:44.263  INFO MBPdiFrancesco --- [nio-8080-exec-6] c.p.c.ArchiveController                  : getMyArchives() - start
+2021-10-12 21:40:44.263  INFO MBPdiFrancesco --- [nio-8080-exec-6] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 21:40:44.263  INFO MBPdiFrancesco --- [nio-8080-exec-6] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 21:40:44.267  INFO MBPdiFrancesco --- [nio-8080-exec-6] c.p.c.ArchiveController                  : Richieta da utente [admin]
+2021-10-12 21:40:44.267  INFO MBPdiFrancesco --- [nio-8080-exec-6] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-12 21:40:44.267  INFO MBPdiFrancesco --- [nio-8080-exec-6] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 21:40:44.268  INFO MBPdiFrancesco --- [nio-8080-exec-6] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 21:40:44.274  INFO MBPdiFrancesco --- [nio-8080-exec-6] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-12 21:40:44.274  INFO MBPdiFrancesco --- [nio-8080-exec-6] c.p.c.ArchiveController                  : getMyArchives() - end
+2021-10-12 21:40:44.276  INFO MBPdiFrancesco --- [nio-8080-exec-6] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-12 21:40:51.506  INFO MBPdiFrancesco --- [nio-8080-exec-8] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-12 21:40:51.509  INFO MBPdiFrancesco --- [nio-8080-exec-8] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-12 21:40:51.510  INFO MBPdiFrancesco --- [nio-8080-exec-8] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-12 21:40:51.522  INFO MBPdiFrancesco --- [nio-8080-exec-8] c.p.c.VerbaleController                  : getAll() - start
+2021-10-12 21:40:51.523  INFO MBPdiFrancesco --- [nio-8080-exec-8] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 21:40:51.523  INFO MBPdiFrancesco --- [nio-8080-exec-8] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 21:40:51.546  INFO MBPdiFrancesco --- [nio-8080-exec-8] c.p.c.VerbaleController                  : Richieta da utente [admin] per archivio: [1] con parametri: [{"filters":{},"pagination":[25,0]}]
+2021-10-12 21:40:51.547  INFO MBPdiFrancesco --- [nio-8080-exec-8] c.p.s.UserService                        : preliminaryChecks() - start
+2021-10-12 21:40:51.547  INFO MBPdiFrancesco --- [nio-8080-exec-8] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 21:40:51.547  INFO MBPdiFrancesco --- [nio-8080-exec-8] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 21:40:51.576  INFO MBPdiFrancesco --- [nio-8080-exec-8] c.p.s.UserService                        : userHasAccessToArchive() - start
+2021-10-12 21:40:51.576  INFO MBPdiFrancesco --- [nio-8080-exec-8] c.p.s.UserService                        : userHasAccessToArchive() - end
+2021-10-12 21:40:51.582  INFO MBPdiFrancesco --- [nio-8080-exec-8] c.p.s.UserService                        : preliminaryChecks() - end
+2021-10-12 21:40:51.585  INFO MBPdiFrancesco --- [nio-8080-exec-8] c.p.s.VerbaleService                     : getVerbaliLength() - start
+2021-10-12 21:40:51.588  INFO MBPdiFrancesco --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : buildCountRows() - start
+2021-10-12 21:40:51.588  INFO MBPdiFrancesco --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : appendWhereCondition() - start
+2021-10-12 21:40:51.588  INFO MBPdiFrancesco --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : appendWhereCondition() - end
+2021-10-12 21:40:51.588  INFO MBPdiFrancesco --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : buildCountRows() - end
+2021-10-12 21:40:51.589  INFO MBPdiFrancesco --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : performQuery() - start
+2021-10-12 21:40:51.589  INFO MBPdiFrancesco --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : createConnection() - start
+2021-10-12 21:40:51.590  INFO MBPdiFrancesco --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : mapDriverClassName() - start
+2021-10-12 21:40:51.591  INFO MBPdiFrancesco --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : mapDriverClassName() - class name found
+2021-10-12 21:40:51.591  INFO MBPdiFrancesco --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : mapDriverClassName() - end
+2021-10-12 21:40:51.968 ERROR MBPdiFrancesco --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : createConnection() - bad connection
+2021-10-12 21:40:51.975 ERROR MBPdiFrancesco --- [nio-8080-exec-8] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.portaleps.exception.CustomException: Bad connection] with root cause
+com.portaleps.exception.CustomException: Bad connection
+	at com.portaleps.helper.DatabaseHelper.createConnection(DatabaseHelper.java:51)
+	at com.portaleps.helper.DatabaseHelper.performQuery(DatabaseHelper.java:60)
+	at com.portaleps.service.VerbaleService.getVerbaliLength(VerbaleService.java:58)
+	at com.portaleps.controller.VerbaleController.getAll(VerbaleController.java:59)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:121)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at com.portaleps.security.JwtTokenFilter.doFilterInternal(JwtTokenFilter.java:49)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-10-12 21:41:55.252  INFO MBPdiFrancesco --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 21:41:55.262  INFO MBPdiFrancesco --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2021-10-12 21:41:55.283  INFO MBPdiFrancesco --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.

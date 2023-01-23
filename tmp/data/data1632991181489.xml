@@ -1,0 +1,173 @@
+<Document>
+  <nomeDottore>asd</nomeDottore>
+  <printingTime>2021/09/30, 10:09</printingTime>
+  <nomePresidio>Taormina</nomePresidio>
+  <paziente>
+    <numeroAccesso>200900000001</numeroAccesso>
+    <cognome>FERRANTE</cognome>
+    <nome>GIUSEPPE</nome>
+    <dataNascita>01/031962</dataNascita>
+    <sesso>M</sesso>
+    <codiceFiscale>FRRGPP62C01G273F</codiceFiscale>
+    <statoCivile>0</statoCivile>
+    <comuneNascita>PALERMO</comuneNascita>
+    <provinciaNascita>PA</provinciaNascita>
+    <codiceIstatNascita>082053</codiceIstatNascita>
+    <comuneResidenza>CALATABIANO</comuneResidenza>
+    <provinciaResidenza>CT</provinciaResidenza>
+    <codiceIstatResidenza>087010</codiceIstatResidenza>
+    <indirizzo>VIA VITTORIO VENETO</indirizzo>
+    <regioneResidenza>SICILIA                       </regioneResidenza>
+    <cittadinanza>Italia</cittadinanza>
+    <asl>326</asl>
+  </paziente>
+  <accettazioneTriage>
+    <dataAccesso>18/052009, 10:21</dataAccesso>
+    <causaAccesso>Decisione propria</causaAccesso>
+    <istitutoProvenienza/>
+    <eroganteServizio>SSN + Ticket (compartecipazione alla spesa da parte dell'assistito)</eroganteServizio>
+    <esenzione/>
+    <mezzoArrivo>Autonomo</mezzoArrivo>
+    <targaMezzo/>
+    <problemaAccesso>Altri sintomi o disturbi</problemaAccesso>
+    <dettProblema/>
+    <luogoIncidente/>
+    <responsabilità>No</responsabilità>
+    <circostanze/>
+    <dataEvento/>
+    <note>riferisce trauma contusivo gamba sx</note>
+  </accettazioneTriage>
+  <cronologiaTriage>
+    <cronologiaTriage>
+      <colore>Bianco</colore>
+      <nomeOperatore>Concetta Sterrantino</nomeOperatore>
+      <note/>
+      <dataValutazione>18/052009, 10:21</dataValutazione>
+    </cronologiaTriage>
+    <cronologiaTriage>
+      <colore>Verde</colore>
+      <nomeOperatore>Umberto Prosperini</nomeOperatore>
+      <note></note>
+      <dataValutazione>18/052009, 12:47</dataValutazione>
+    </cronologiaTriage>
+  </cronologiaTriage>
+  <cronologiaCondizioniCliniche>
+    <cronologiaCondizioniCliniche>
+      <info>Temperatura corporea</info>
+      <valore>NR</valore>
+      <valutatore>Concetta Sterrantino</valutatore>
+      <data>18/052009, 10:23</data>
+    </cronologiaCondizioniCliniche>
+    <cronologiaCondizioniCliniche>
+      <info>SpO2</info>
+      <valore>NR</valore>
+      <valutatore>Concetta Sterrantino</valutatore>
+      <data>18/052009, 10:23</data>
+    </cronologiaCondizioniCliniche>
+    <cronologiaCondizioniCliniche>
+      <info>F. C.</info>
+      <valore>NR</valore>
+      <valutatore>Concetta Sterrantino</valutatore>
+      <data>18/052009, 10:23</data>
+    </cronologiaCondizioniCliniche>
+    <cronologiaCondizioniCliniche>
+      <info>Pressione arteriosa</info>
+      <valore>NR</valore>
+      <valutatore>Concetta Sterrantino</valutatore>
+      <data>18/052009, 10:23</data>
+    </cronologiaCondizioniCliniche>
+    <cronologiaCondizioniCliniche>
+      <info>Dolore</info>
+      <valore>Assente</valore>
+      <valutatore>Concetta Sterrantino</valutatore>
+      <data>18/052009, 10:23</data>
+    </cronologiaCondizioniCliniche>
+    <cronologiaCondizioniCliniche>
+      <info>Stato di coscienza</info>
+      <valore>Lucido-Orientato</valore>
+      <valutatore>Concetta Sterrantino</valutatore>
+      <data>18/052009, 10:23</data>
+    </cronologiaCondizioniCliniche>
+    <cronologiaCondizioniCliniche>
+      <info>Stato di coscienza</info>
+      <valore>Lucido-Orientato</valore>
+      <valutatore>Concetta Sterrantino</valutatore>
+      <data>18/052009, 10:26</data>
+    </cronologiaCondizioniCliniche>
+    <cronologiaCondizioniCliniche>
+      <info>Diario clinico - Anamnesi</info>
+      <valore>contusione gamba sx con ematoma post-traumatico&#xd;
+trauma contusico caviglia sx</valore>
+      <valutatore>Umberto Prosperini</valutatore>
+      <data>18/052009, 10:45</data>
+    </cronologiaCondizioniCliniche>
+  </cronologiaCondizioniCliniche>
+  <cronologiaAccettazioneMedico>
+    <cronologiaAccettazioneMedico>
+      <dataCarico>18/052009</dataCarico>
+      <noteCarico></noteCarico>
+      <dataCessione>18/052009</dataCessione>
+      <noteCessione>Paziente dimesso</noteCessione>
+      <medico>Umberto Prosperini</medico>
+    </cronologiaAccettazioneMedico>
+    <cronologiaAccettazioneMedico>
+      <dataCarico>18/052009</dataCarico>
+      <noteCarico>Dimissione paziente annullata</noteCarico>
+      <dataCessione>18/052009</dataCessione>
+      <noteCessione>Paziente dimesso</noteCessione>
+      <medico>Umberto Prosperini</medico>
+    </cronologiaAccettazioneMedico>
+    <cronologiaAccettazioneMedico>
+      <dataCarico>18/052009</dataCarico>
+      <noteCarico>Dimissione paziente annullata</noteCarico>
+      <dataCessione>18/052009</dataCessione>
+      <noteCessione>Paziente dimesso</noteCessione>
+      <medico>Umberto Prosperini</medico>
+    </cronologiaAccettazioneMedico>
+    <cronologiaAccettazioneMedico>
+      <dataCarico>18/052009</dataCarico>
+      <noteCarico>Dimissione paziente annullata</noteCarico>
+      <dataCessione>18/052009</dataCessione>
+      <noteCessione>Paziente dimesso</noteCessione>
+      <medico>Umberto Prosperini</medico>
+    </cronologiaAccettazioneMedico>
+  </cronologiaAccettazioneMedico>
+  <iterDiagnostico>
+    <iterDiagnostico>
+      <dataRichiesta/>
+      <richiedente>Umberto Prosperini</richiedente>
+      <esame>RX PIEDE SN</esame>
+    </iterDiagnostico>
+    <iterDiagnostico>
+      <dataRichiesta>2009/05/18, 10:40</dataRichiesta>
+      <richiedente>Umberto Prosperini</richiedente>
+      <esame>RX DELLA CAVIGLIA SN</esame>
+    </iterDiagnostico>
+    <iterDiagnostico>
+      <dataRichiesta>2009/05/18, 10:40</dataRichiesta>
+      <richiedente>Umberto Prosperini</richiedente>
+      <esame>RX PIEDE SN</esame>
+    </iterDiagnostico>
+  </iterDiagnostico>
+  <somministrazioni/>
+  <esitoDimissione>
+    <dataDimissione>18/052009, 12:35</dataDimissione>
+    <esito>Dimissione a domicilio</esito>
+    <reparto/>
+    <mezzo/>
+    <targaMezzo></targaMezzo>
+    <istituto/>
+    <motivo/>
+    <prognosi>7</prognosi>
+    <refertiCompilati></refertiCompilati>
+    <conclusioni/>
+    <terapia>arto sollevato&#xd;
+essaven gel : due volte al di'&#xd;
+fluxum 0,4: una f sc al di&#xd;
+controllo dal medico curante o dall' ortopedico&#xd;
+gambaletto 1A classe</terapia>
+    <diaognosi/>
+    <followUp/>
+    <referto>&lt;p>&lt;font size="5">trauma da schiacciamento polpaccio dx con ematoma consensuale&lt;/font>&lt;/p></referto>
+  </esitoDimissione>
+</Document>

@@ -1,13 +1,12 @@
 package com.portaleps.repository;
 
-import com.portaleps.model.Archive;
-import com.portaleps.model.User;
+import com.portaleps.model.entity.Archive;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.List;
+import java.util.Optional;
 
-public interface ArchiveRepository extends JpaRepository<User, Integer> {
+public interface ArchiveRepository extends JpaRepository<Archive, Integer> {
 
-    Archive findById(Long id);
+    Optional<Archive> findById(Integer id);
 
 }

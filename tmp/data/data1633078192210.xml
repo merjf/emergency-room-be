@@ -1,0 +1,246 @@
+<Document>
+  <nomeDottore>admin</nomeDottore>
+  <printingTime>2021/10/01, 10:10</printingTime>
+  <nomePresidio>Taormina</nomePresidio>
+  <paziente>
+    <numeroAccesso>201100005057</numeroAccesso>
+    <cognome>AUTERI</cognome>
+    <nome>CARMELO</nome>
+    <dataNascita>19/05/1964</dataNascita>
+    <sesso>M</sesso>
+    <codiceFiscale>TRACML64E19E014Y</codiceFiscale>
+    <statoCivile>4</statoCivile>
+    <comuneNascita>GIARDINI-NAXOS</comuneNascita>
+    <provinciaNascita>ME</provinciaNascita>
+    <codiceIstatNascita>083032</codiceIstatNascita>
+    <comuneResidenza>GIARDINI-NAXOS</comuneResidenza>
+    <provinciaResidenza>ME</provinciaResidenza>
+    <codiceIstatResidenza>083032</codiceIstatResidenza>
+    <indirizzo>ARNO 10</indirizzo>
+    <regioneResidenza>SICILIA                       </regioneResidenza>
+    <cittadinanza>Italia</cittadinanza>
+    <asl>328</asl>
+  </paziente>
+  <accettazioneTriage>
+    <dataAccesso>17/03/2011, 10:15</dataAccesso>
+    <causaAccesso>Decisione propria</causaAccesso>
+    <istitutoProvenienza/>
+    <eroganteServizio>SSN (onere a carico del Servizio Sanitario Nazionale per accessi che non prevedono il ticket)</eroganteServizio>
+    <esenzione/>
+    <mezzoArrivo>Autonomo</mezzoArrivo>
+    <targaMezzo/>
+    <problemaAccesso>Altri sintomi o disturbi</problemaAccesso>
+    <dettProblema/>
+    <luogoIncidente/>
+    <responsabilità>Si</responsabilità>
+    <circostanze/>
+    <dataEvento/>
+    <note>sosp. pancreatite</note>
+  </accettazioneTriage>
+  <cronologiaTriage>
+    <cronologiaTriage>
+      <colore>Verde</colore>
+      <nomeOperatore>Giovanni Caminiti</nomeOperatore>
+      <note/>
+      <dataValutazione>17/03/2011, 10:15</dataValutazione>
+    </cronologiaTriage>
+    <cronologiaTriage>
+      <colore>Giallo</colore>
+      <nomeOperatore>Rosario Cristoforo Puleo</nomeOperatore>
+      <note></note>
+      <dataValutazione>17/03/2011, 10:34</dataValutazione>
+    </cronologiaTriage>
+  </cronologiaTriage>
+  <cronologiaCondizioniCliniche>
+    <cronologiaCondizioniCliniche>
+      <info>Temperatura corporea</info>
+      <valore>NR</valore>
+      <valutatore>Giovanni Caminiti</valutatore>
+      <data>17/03/2011, 10:16</data>
+    </cronologiaCondizioniCliniche>
+    <cronologiaCondizioniCliniche>
+      <info>SpO2</info>
+      <valore>NR</valore>
+      <valutatore>Giovanni Caminiti</valutatore>
+      <data>17/03/2011, 10:16</data>
+    </cronologiaCondizioniCliniche>
+    <cronologiaCondizioniCliniche>
+      <info>F. C.</info>
+      <valore>NR</valore>
+      <valutatore>Giovanni Caminiti</valutatore>
+      <data>17/03/2011, 10:16</data>
+    </cronologiaCondizioniCliniche>
+    <cronologiaCondizioniCliniche>
+      <info>Pressione arteriosa</info>
+      <valore>NR</valore>
+      <valutatore>Giovanni Caminiti</valutatore>
+      <data>17/03/2011, 10:16</data>
+    </cronologiaCondizioniCliniche>
+    <cronologiaCondizioniCliniche>
+      <info>Dolore</info>
+      <valore>Assente</valore>
+      <valutatore>Giovanni Caminiti</valutatore>
+      <data>17/03/2011, 10:16</data>
+    </cronologiaCondizioniCliniche>
+    <cronologiaCondizioniCliniche>
+      <info>Stato di coscienza</info>
+      <valore>Lucido-Orientato</valore>
+      <valutatore>Giovanni Caminiti</valutatore>
+      <data>17/03/2011, 10:16</data>
+    </cronologiaCondizioniCliniche>
+    <cronologiaCondizioniCliniche>
+      <info>Diario clinico - Anamnesi</info>
+      <valore>Dolore in regione lombare sn. che si irradia sul decorso ureterale omolaterale </valore>
+      <valutatore>Rosario Cristoforo Puleo</valutatore>
+      <data>17/03/2011, 13:46</data>
+    </cronologiaCondizioniCliniche>
+  </cronologiaCondizioniCliniche>
+  <cronologiaAccettazioneMedico>
+    <cronologiaAccettazioneMedico>
+      <dataCarico>17/03/2011</dataCarico>
+      <noteCarico></noteCarico>
+      <dataCessione>17/03/2011</dataCessione>
+      <noteCessione>Paziente dimesso</noteCessione>
+      <medico>Rosario Cristoforo Puleo</medico>
+    </cronologiaAccettazioneMedico>
+  </cronologiaAccettazioneMedico>
+  <iterDiagnostico>
+    <iterDiagnostico>
+      <dataRichiesta>17/03/2011, 10:32</dataRichiesta>
+      <richiedente>Rosario Cristoforo Puleo</richiedente>
+      <esame>BILIRUBINA TOTALE E FRAZIONATA</esame>
+    </iterDiagnostico>
+    <iterDiagnostico>
+      <dataRichiesta>17/03/2011, 10:32</dataRichiesta>
+      <richiedente>Rosario Cristoforo Puleo</richiedente>
+      <esame>URATO [S]</esame>
+    </iterDiagnostico>
+    <iterDiagnostico>
+      <dataRichiesta>17/03/2011, 10:32</dataRichiesta>
+      <richiedente>Rosario Cristoforo Puleo</richiedente>
+      <esame>CREATINCHINASI ISOENZIMA MB (CK-MB)</esame>
+    </iterDiagnostico>
+    <iterDiagnostico>
+      <dataRichiesta>17/03/2011, 10:32</dataRichiesta>
+      <richiedente>Rosario Cristoforo Puleo</richiedente>
+      <esame>AZOTEMIA [S]</esame>
+    </iterDiagnostico>
+    <iterDiagnostico>
+      <dataRichiesta>17/03/2011, 10:32</dataRichiesta>
+      <richiedente>Rosario Cristoforo Puleo</richiedente>
+      <esame>CREATINCHINASI (CPK O CK)</esame>
+    </iterDiagnostico>
+    <iterDiagnostico>
+      <dataRichiesta>17/03/2011, 10:32</dataRichiesta>
+      <richiedente>Rosario Cristoforo Puleo</richiedente>
+      <esame>ALANINA AMINOTRANSFERASI (ALT) (GOT) [S/U]</esame>
+    </iterDiagnostico>
+    <iterDiagnostico>
+      <dataRichiesta>17/03/2011, 10:32</dataRichiesta>
+      <richiedente>Rosario Cristoforo Puleo</richiedente>
+      <esame>CREATININA [S]</esame>
+    </iterDiagnostico>
+    <iterDiagnostico>
+      <dataRichiesta>17/03/2011, 10:32</dataRichiesta>
+      <richiedente>Rosario Cristoforo Puleo</richiedente>
+      <esame>ALFA AMILASI ISOENZIMI (FRAZIONE PANCREATICA)</esame>
+    </iterDiagnostico>
+    <iterDiagnostico>
+      <dataRichiesta>17/03/2011, 10:32</dataRichiesta>
+      <richiedente>Rosario Cristoforo Puleo</richiedente>
+      <esame>LIPASI [S]</esame>
+    </iterDiagnostico>
+    <iterDiagnostico>
+      <dataRichiesta>17/03/2011, 10:32</dataRichiesta>
+      <richiedente>Rosario Cristoforo Puleo</richiedente>
+      <esame>EMOCROMO:  HB, GR, GB, HCT, PLT, IND. DERIV., F. L.</esame>
+    </iterDiagnostico>
+    <iterDiagnostico>
+      <dataRichiesta>17/03/2011, 10:32</dataRichiesta>
+      <richiedente>Rosario Cristoforo Puleo</richiedente>
+      <esame>FIBRINOGENO</esame>
+    </iterDiagnostico>
+    <iterDiagnostico>
+      <dataRichiesta>17/03/2011, 10:32</dataRichiesta>
+      <richiedente>Rosario Cristoforo Puleo</richiedente>
+      <esame>GLICEMIA [U]</esame>
+    </iterDiagnostico>
+    <iterDiagnostico>
+      <dataRichiesta>17/03/2011, 10:32</dataRichiesta>
+      <richiedente>Rosario Cristoforo Puleo</richiedente>
+      <esame>LATTATO DEIDROGENASI (LDH) [S/F]</esame>
+    </iterDiagnostico>
+    <iterDiagnostico>
+      <dataRichiesta>17/03/2011, 10:32</dataRichiesta>
+      <richiedente>Rosario Cristoforo Puleo</richiedente>
+      <esame>MIOGLOBINA [S/U]</esame>
+    </iterDiagnostico>
+    <iterDiagnostico>
+      <dataRichiesta>17/03/2011, 10:32</dataRichiesta>
+      <richiedente>Rosario Cristoforo Puleo</richiedente>
+      <esame>POTASSIO [S/U/DU/(SG)ER]</esame>
+    </iterDiagnostico>
+    <iterDiagnostico>
+      <dataRichiesta>17/03/2011, 10:32</dataRichiesta>
+      <richiedente>Rosario Cristoforo Puleo</richiedente>
+      <esame>ALANINA AMINOTRANSFERASI (ALT) (GPT) [S/U]</esame>
+    </iterDiagnostico>
+    <iterDiagnostico>
+      <dataRichiesta>17/03/2011, 10:32</dataRichiesta>
+      <richiedente>Rosario Cristoforo Puleo</richiedente>
+      <esame>SODIO [S/U/DU/(SG)ER]</esame>
+    </iterDiagnostico>
+  </iterDiagnostico>
+  <somministrazioni>
+    <somministrazioni>
+      <farmaco>SOLUZIONE FISIOLOGICA 250 cc</farmaco>
+      <qnt>1</qnt>
+      <richiedente>Rosario Cristoforo Puleo</richiedente>
+      <dataRichiesta>17/03/2011</dataRichiesta>
+      <noteRichiesta></noteRichiesta>
+      <somministratore>null null</somministratore>
+      <noteSomministrazione/>
+      <dataSomministrazione/>
+    </somministrazioni>
+    <somministrazioni>
+      <farmaco>RANIDIL 50mg/5ml FIALE</farmaco>
+      <qnt>1</qnt>
+      <richiedente>Rosario Cristoforo Puleo</richiedente>
+      <dataRichiesta>17/03/2011</dataRichiesta>
+      <noteRichiesta></noteRichiesta>
+      <somministratore>null null</somministratore>
+      <noteSomministrazione/>
+      <dataSomministrazione/>
+    </somministrazioni>
+    <somministrazioni>
+      <farmaco>RANIDIL 50mg/5ml FIALE</farmaco>
+      <qnt>1</qnt>
+      <richiedente>Rosario Cristoforo Puleo</richiedente>
+      <dataRichiesta>17/03/2011</dataRichiesta>
+      <noteRichiesta></noteRichiesta>
+      <somministratore>null null</somministratore>
+      <noteSomministrazione/>
+      <dataSomministrazione/>
+    </somministrazioni>
+  </somministrazioni>
+  <esitoDimissione>
+    <dataDimissione>17/03/2011, 13:49</dataDimissione>
+    <esito>Dimissione a strutture ambulatoriali</esito>
+    <reparto/>
+    <mezzo>Autonomo</mezzo>
+    <targaMezzo></targaMezzo>
+    <istituto/>
+    <motivo/>
+    <prognosi>6</prognosi>
+    <refertiCompilati></refertiCompilati>
+    <conclusioni>.</conclusioni>
+    <terapia>Dieta idrica &#xd;
+Rilaten cpr.: una cpr. ogni otto ore&#xd;
+Sol. Schoum : un cucchiaio in 1/2 bicchiere d' acqua ogni sei ore &#xd;
+&#xd;
+</terapia>
+    <diagnosi>Aumento enzimi pancreatici</diagnosi>
+    <followUp>ritorna domani mattina per ripetere esami di laboratorio </followUp>
+    <referto>&lt;font size="4">Colica reno-ureterale in paz. con enzimi pancreatici in movimento ( Lipasi 450 )&lt;/font></referto>
+  </esitoDimissione>
+</Document>

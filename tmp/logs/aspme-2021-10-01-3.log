@@ -1,0 +1,688 @@
+2021-10-01 10:20:32.483  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.PortalepsApplication                 : Starting PortalepsApplication using Java 11.0.12 on MacBook-Pro-di-Francesco.local with PID 44259 (/Users/merjf/Documents/Work/Projects/Messina/Pronto Soccorso Messina/aspme-ps-repo/target/classes started by merjf in /Users/merjf/Documents/Work/Projects/Messina/Pronto Soccorso Messina/aspme-ps-repo)
+2021-10-01 10:20:32.492  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.PortalepsApplication                 : No active profile set, falling back to default profiles: default
+2021-10-01 10:20:33.243  INFO MacBook-Pro-di-Francesco.local --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-01 10:20:33.308  INFO MacBook-Pro-di-Francesco.local --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 3 JPA repository interfaces.
+2021-10-01 10:20:33.645  INFO MacBook-Pro-di-Francesco.local --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@568750b7' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-01 10:20:33.650  INFO MacBook-Pro-di-Francesco.local --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-01 10:20:33.922  INFO MacBook-Pro-di-Francesco.local --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-10-01 10:20:33.932  INFO MacBook-Pro-di-Francesco.local --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2021-10-01 10:20:33.933  INFO MacBook-Pro-di-Francesco.local --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-10-01 10:20:33.933  INFO MacBook-Pro-di-Francesco.local --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-10-01 10:20:34.019  INFO MacBook-Pro-di-Francesco.local --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-10-01 10:20:34.019  INFO MacBook-Pro-di-Francesco.local --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1478 ms
+2021-10-01 10:20:34.197  INFO MacBook-Pro-di-Francesco.local --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-01 10:20:34.270  INFO MacBook-Pro-di-Francesco.local --- [           main] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-01 10:20:34.435  INFO MacBook-Pro-di-Francesco.local --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-01 10:20:34.540  INFO MacBook-Pro-di-Francesco.local --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-10-01 10:20:35.068  INFO MacBook-Pro-di-Francesco.local --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-10-01 10:20:35.115  INFO MacBook-Pro-di-Francesco.local --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-10-01 10:20:36.030  INFO MacBook-Pro-di-Francesco.local --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-01 10:20:36.040  INFO MacBook-Pro-di-Francesco.local --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-01 10:20:36.583  WARN MacBook-Pro-di-Francesco.local --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-01 10:20:36.621  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.s.WebSecurityConfig                  : authenticationManagerBean() - start
+2021-10-01 10:20:36.621  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.s.WebSecurityConfig                  : authenticationManagerBean() - end
+2021-10-01 10:20:36.789  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.s.WebSecurityConfig                  : configure(http) - start
+2021-10-01 10:20:36.793  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.s.JwtTokenFilterConfigurer           : JwtTokenFilterConfigurer() - start
+2021-10-01 10:20:36.793  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.s.JwtTokenFilterConfigurer           : JwtTokenFilterConfigurer() - end
+2021-10-01 10:20:36.793  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.s.WebSecurityConfig                  : configure(http) - end
+2021-10-01 10:20:36.794  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.s.WebSecurityConfig                  : configure(web) - start
+2021-10-01 10:20:36.794  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.s.WebSecurityConfig                  : configure(http) - end
+2021-10-01 10:20:36.795  INFO MacBook-Pro-di-Francesco.local --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/v2/api-docs'] with []
+2021-10-01 10:20:36.796  INFO MacBook-Pro-di-Francesco.local --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/swagger-resources/**'] with []
+2021-10-01 10:20:36.796  INFO MacBook-Pro-di-Francesco.local --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/swagger-ui.html'] with []
+2021-10-01 10:20:36.796  INFO MacBook-Pro-di-Francesco.local --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/configuration/**'] with []
+2021-10-01 10:20:36.796  INFO MacBook-Pro-di-Francesco.local --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/webjars/**'] with []
+2021-10-01 10:20:36.796  INFO MacBook-Pro-di-Francesco.local --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/auth/login'] with []
+2021-10-01 10:20:36.796  INFO MacBook-Pro-di-Francesco.local --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/h2-console/**/**'] with []
+2021-10-01 10:20:36.868  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.s.WebSecurityConfig                  : addCorsMappings() - start
+2021-10-01 10:20:36.869  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.s.WebSecurityConfig                  : addCorsMappings() - end
+2021-10-01 10:20:36.990  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.s.JwtTokenFilterConfigurer           : configure() - start
+2021-10-01 10:20:36.990  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.s.JwtTokenFilterConfigurer           : configure() - end
+2021-10-01 10:20:36.990  INFO MacBook-Pro-di-Francesco.local --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@61c11339, org.springframework.security.web.context.SecurityContextPersistenceFilter@4f8641d1, org.springframework.security.web.header.HeaderWriterFilter@4e312811, org.springframework.web.filter.CorsFilter@31ecd003, org.springframework.security.web.authentication.logout.LogoutFilter@6fd07a56, com.portaleps.security.JwtTokenFilter@5d3d5242, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3e574f9c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2ebd6a0d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a5c0b8, org.springframework.security.web.session.SessionManagementFilter@4402ed61, org.springframework.security.web.access.ExceptionTranslationFilter@4088c5e6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@50b78155]
+2021-10-01 10:20:37.201  INFO MacBook-Pro-di-Francesco.local --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2021-10-01 10:20:37.234  INFO MacBook-Pro-di-Francesco.local --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-10-01 10:20:37.242  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.PortalepsApplication                 : Started PortalepsApplication in 5.448 seconds (JVM running for 11.325)
+2021-10-01 10:20:37.424  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.PortalepsApplication                 : initFolders() - start
+2021-10-01 10:20:37.426  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.PortalepsApplication                 : initFolders() - folders created
+2021-10-01 10:20:37.426  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.PortalepsApplication                 : initFolders() - end
+2021-10-01 10:21:00.448  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-01 10:21:00.449  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-10-01 10:21:00.450  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2021-10-01 10:21:00.589  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.c.AuthController                     : login() - start
+2021-10-01 10:21:00.605  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.c.AuthController                     : Richieta con body [{"username":"admin","password":"admin"}]
+2021-10-01 10:21:00.605  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.h.UserHelper                         : login() - start
+2021-10-01 10:21:01.017  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.h.UserHelper                         : loadUserByUsername() - start
+2021-10-01 10:21:01.019  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.h.UserHelper                         : loadUserByUsername() - end
+2021-10-01 10:21:01.373  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-01 10:21:01.398  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-01 10:21:01.398  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.h.UserHelper                         : login() - end
+2021-10-01 10:21:01.403  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.s.UserService                        : getUserDTO() - start
+2021-10-01 10:21:01.415  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.s.UserService                        : toDto() - start
+2021-10-01 10:21:01.415  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.s.UserService                        : toDto() - end
+2021-10-01 10:21:01.455  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-01 10:21:01.492  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-01 10:21:01.493  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.c.AuthController                     : login() - login success
+2021-10-01 10:21:01.493  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.c.AuthController                     : login() - end
+2021-10-01 10:21:01.583  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-01 10:21:01.585  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-01 10:21:01.587  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-01 10:21:01.600  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.c.ArchiveController                  : getMyArchives() - start
+2021-10-01 10:21:01.601  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:21:01.601  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:21:01.609  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.c.ArchiveController                  : Richieta da utente [admin]
+2021-10-01 10:21:01.610  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-01 10:21:01.612  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:21:01.612  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:21:01.634  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-01 10:21:01.634  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.c.ArchiveController                  : getMyArchives() - end
+2021-10-01 10:21:01.655  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-01 10:21:01.822  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-01 10:21:01.823  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-01 10:21:01.824  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-01 10:21:01.826  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.c.ArchiveController                  : getMyArchives() - start
+2021-10-01 10:21:01.827  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:21:01.827  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:21:01.831  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.c.ArchiveController                  : Richieta da utente [admin]
+2021-10-01 10:21:01.832  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-01 10:21:01.832  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:21:01.832  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:21:01.850  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-01 10:21:01.850  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.c.ArchiveController                  : getMyArchives() - end
+2021-10-01 10:21:01.854  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-01 10:21:12.041  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-01 10:21:12.044  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-01 10:21:12.045  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-01 10:21:12.051  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.c.VerbaleController                  : getAll() - start
+2021-10-01 10:21:12.051  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:21:12.051  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:21:12.062  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.c.VerbaleController                  : Richieta da utente [admin] per archivio: [5] con parametri: [{"filters":{},"pagination":[25,0]}]
+2021-10-01 10:21:12.063  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.UserService                        : preliminaryChecks() - start
+2021-10-01 10:21:12.063  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:21:12.063  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:21:12.097  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.UserService                        : userHasAccessToArchive() - start
+2021-10-01 10:21:12.097  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.UserService                        : userHasAccessToArchive() - end
+2021-10-01 10:21:12.104  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.UserService                        : preliminaryChecks() - end
+2021-10-01 10:21:12.106  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.VerbaleService                     : getVerbaliLength() - start
+2021-10-01 10:21:12.109  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.QueryBuilder                       : buildCountRows() - start
+2021-10-01 10:21:12.109  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.QueryBuilder                       : appendWhereCondition() - start
+2021-10-01 10:21:12.109  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.QueryBuilder                       : appendWhereCondition() - end
+2021-10-01 10:21:12.109  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.QueryBuilder                       : buildCountRows() - end
+2021-10-01 10:21:12.110  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : performQuery() - start
+2021-10-01 10:21:12.110  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : createConnection() - start
+2021-10-01 10:21:12.112  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : mapDriverClassName() - start
+2021-10-01 10:21:12.112  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : mapDriverClassName() - class name found
+2021-10-01 10:21:12.112  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : mapDriverClassName() - end
+2021-10-01 10:21:25.800  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : createConnection() - connection created
+2021-10-01 10:21:25.835  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : performQuery() - connection closed
+2021-10-01 10:21:25.835  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : performQuery() - end
+2021-10-01 10:21:25.836  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.VerbaleService                     : getVerbaliLength() - end
+2021-10-01 10:21:25.836  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.VerbaleService                     : populatePagination() - start
+2021-10-01 10:21:25.836  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.VerbaleService                     : populatePagination() - end
+2021-10-01 10:21:25.837  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.VerbaleService                     : getVerbali() - start
+2021-10-01 10:21:25.837  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.QueryBuilder                       : buildSearchQuery() - start
+2021-10-01 10:21:25.837  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.QueryBuilder                       : appendWhereCondition() - start
+2021-10-01 10:21:25.837  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.QueryBuilder                       : appendWhereCondition() - end
+2021-10-01 10:21:25.837  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.QueryBuilder                       : appendPagination() - start
+2021-10-01 10:21:25.838  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.QueryBuilder                       : appendPagination() - end
+2021-10-01 10:21:25.838  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.QueryBuilder                       : buildSearchQuery() - end
+2021-10-01 10:21:25.838  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : performQuery() - start
+2021-10-01 10:21:25.839  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : createConnection() - start
+2021-10-01 10:21:25.839  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : mapDriverClassName() - start
+2021-10-01 10:21:25.839  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : mapDriverClassName() - class name found
+2021-10-01 10:21:25.839  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : mapDriverClassName() - end
+2021-10-01 10:21:26.241  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : createConnection() - connection created
+2021-10-01 10:21:26.273  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.VerbaleService                     : extractVerbaliList() - start
+2021-10-01 10:21:26.298  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.VerbaleService                     : extractVerbaliList() - end
+2021-10-01 10:21:26.299  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : performQuery() - connection closed
+2021-10-01 10:21:26.299  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : performQuery() - end
+2021-10-01 10:21:26.299  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.VerbaleService                     : getVerbali() - end
+2021-10-01 10:21:26.299  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.c.VerbaleController                  : getAll() - action performed
+2021-10-01 10:21:26.299  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.c.VerbaleController                  : getAll() - end
+2021-10-01 10:21:26.308  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-01 10:21:52.742  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-01 10:21:52.744  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-01 10:21:52.745  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-01 10:21:52.747  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.c.VerbaleController                  : getAll() - start
+2021-10-01 10:21:52.748  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:21:52.748  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:21:52.758  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.c.VerbaleController                  : Richieta da utente [admin] per archivio: [5] con parametri: [{"filters":{"numeroAccesso":200900000003},"pagination":[25,0]}]
+2021-10-01 10:21:52.758  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.UserService                        : preliminaryChecks() - start
+2021-10-01 10:21:52.759  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:21:52.759  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:21:52.768  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.UserService                        : userHasAccessToArchive() - start
+2021-10-01 10:21:52.768  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.UserService                        : userHasAccessToArchive() - end
+2021-10-01 10:21:52.773  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.UserService                        : preliminaryChecks() - end
+2021-10-01 10:21:52.776  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.VerbaleService                     : getVerbaliLength() - start
+2021-10-01 10:21:52.776  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : buildCountRows() - start
+2021-10-01 10:21:52.777  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : appendWhereCondition() - start
+2021-10-01 10:21:52.779  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : appendWhereCondition() - end
+2021-10-01 10:21:52.779  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : buildCountRows() - end
+2021-10-01 10:21:52.779  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : performQuery() - start
+2021-10-01 10:21:52.779  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : createConnection() - start
+2021-10-01 10:21:52.781  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : mapDriverClassName() - start
+2021-10-01 10:21:52.781  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : mapDriverClassName() - class name found
+2021-10-01 10:21:52.782  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : mapDriverClassName() - end
+2021-10-01 10:21:53.144  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : createConnection() - connection created
+2021-10-01 10:21:53.144  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : applyFilters() - start
+2021-10-01 10:21:53.144  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : extractValueParams() - start
+2021-10-01 10:21:53.144  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : getValue() - start
+2021-10-01 10:21:53.144  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : getValue() - end
+2021-10-01 10:21:53.144  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : extractValueParams() - end
+2021-10-01 10:21:53.145  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : applyFilters() - end
+2021-10-01 10:21:53.315  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : performQuery() - connection closed
+2021-10-01 10:21:53.315  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : performQuery() - end
+2021-10-01 10:21:53.315  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.VerbaleService                     : getVerbaliLength() - end
+2021-10-01 10:21:53.316  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.VerbaleService                     : populatePagination() - start
+2021-10-01 10:21:53.316  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.VerbaleService                     : populatePagination() - end
+2021-10-01 10:21:53.316  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.VerbaleService                     : getVerbali() - start
+2021-10-01 10:21:53.316  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : buildSearchQuery() - start
+2021-10-01 10:21:53.316  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : appendWhereCondition() - start
+2021-10-01 10:21:53.316  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : appendWhereCondition() - end
+2021-10-01 10:21:53.316  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : appendPagination() - start
+2021-10-01 10:21:53.317  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : appendPagination() - end
+2021-10-01 10:21:53.317  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : buildSearchQuery() - end
+2021-10-01 10:21:53.317  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : performQuery() - start
+2021-10-01 10:21:53.317  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : createConnection() - start
+2021-10-01 10:21:53.317  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : mapDriverClassName() - start
+2021-10-01 10:21:53.317  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : mapDriverClassName() - class name found
+2021-10-01 10:21:53.317  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : mapDriverClassName() - end
+2021-10-01 10:21:53.664  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : createConnection() - connection created
+2021-10-01 10:21:53.665  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : applyFilters() - start
+2021-10-01 10:21:53.665  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : extractValueParams() - start
+2021-10-01 10:21:53.665  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : getValue() - start
+2021-10-01 10:21:53.666  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : getValue() - end
+2021-10-01 10:21:53.666  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : extractValueParams() - end
+2021-10-01 10:21:53.666  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : applyFilters() - end
+2021-10-01 10:21:53.893  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.VerbaleService                     : extractVerbaliList() - start
+2021-10-01 10:21:53.896  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.VerbaleService                     : extractVerbaliList() - end
+2021-10-01 10:21:53.898  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : performQuery() - connection closed
+2021-10-01 10:21:53.898  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : performQuery() - end
+2021-10-01 10:21:53.898  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.VerbaleService                     : getVerbali() - end
+2021-10-01 10:21:53.898  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.c.VerbaleController                  : getAll() - action performed
+2021-10-01 10:21:53.898  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.c.VerbaleController                  : getAll() - end
+2021-10-01 10:21:53.901  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-01 10:22:02.575  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-01 10:22:02.576  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-01 10:22:02.577  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-01 10:22:02.579  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.c.VerbaleController                  : getAll() - start
+2021-10-01 10:22:02.579  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:22:02.579  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:22:02.585  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.c.VerbaleController                  : Richieta da utente [admin] per archivio: [5] con parametri: [{"filters":{"cognome":"mollica"},"pagination":[25,0]}]
+2021-10-01 10:22:02.585  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.UserService                        : preliminaryChecks() - start
+2021-10-01 10:22:02.585  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:22:02.585  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:22:02.595  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.UserService                        : userHasAccessToArchive() - start
+2021-10-01 10:22:02.595  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.UserService                        : userHasAccessToArchive() - end
+2021-10-01 10:22:02.598  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.UserService                        : preliminaryChecks() - end
+2021-10-01 10:22:02.603  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.VerbaleService                     : getVerbaliLength() - start
+2021-10-01 10:22:02.603  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : buildCountRows() - start
+2021-10-01 10:22:02.603  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : appendWhereCondition() - start
+2021-10-01 10:22:02.603  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : appendWhereCondition() - end
+2021-10-01 10:22:02.603  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : buildCountRows() - end
+2021-10-01 10:22:02.603  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : performQuery() - start
+2021-10-01 10:22:02.604  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : createConnection() - start
+2021-10-01 10:22:02.605  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : mapDriverClassName() - start
+2021-10-01 10:22:02.605  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : mapDriverClassName() - class name found
+2021-10-01 10:22:02.605  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : mapDriverClassName() - end
+2021-10-01 10:22:03.406  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : createConnection() - connection created
+2021-10-01 10:22:03.406  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : applyFilters() - start
+2021-10-01 10:22:03.406  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : extractValueParams() - start
+2021-10-01 10:22:03.407  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : getValue() - start
+2021-10-01 10:22:03.407  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : getValue() - end
+2021-10-01 10:22:03.407  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : extractValueParams() - end
+2021-10-01 10:22:03.407  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : applyFilters() - end
+2021-10-01 10:22:03.583  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : performQuery() - connection closed
+2021-10-01 10:22:03.583  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : performQuery() - end
+2021-10-01 10:22:03.584  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.VerbaleService                     : getVerbaliLength() - end
+2021-10-01 10:22:03.584  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.VerbaleService                     : populatePagination() - start
+2021-10-01 10:22:03.584  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.VerbaleService                     : populatePagination() - end
+2021-10-01 10:22:03.584  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.VerbaleService                     : getVerbali() - start
+2021-10-01 10:22:03.584  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : buildSearchQuery() - start
+2021-10-01 10:22:03.585  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : appendWhereCondition() - start
+2021-10-01 10:22:03.585  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : appendWhereCondition() - end
+2021-10-01 10:22:03.585  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : appendPagination() - start
+2021-10-01 10:22:03.585  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : appendPagination() - end
+2021-10-01 10:22:03.586  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : buildSearchQuery() - end
+2021-10-01 10:22:03.586  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : performQuery() - start
+2021-10-01 10:22:03.586  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : createConnection() - start
+2021-10-01 10:22:03.586  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : mapDriverClassName() - start
+2021-10-01 10:22:03.586  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : mapDriverClassName() - class name found
+2021-10-01 10:22:03.586  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : mapDriverClassName() - end
+2021-10-01 10:22:03.934  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : createConnection() - connection created
+2021-10-01 10:22:03.935  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : applyFilters() - start
+2021-10-01 10:22:03.935  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : extractValueParams() - start
+2021-10-01 10:22:03.935  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : getValue() - start
+2021-10-01 10:22:03.935  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : getValue() - end
+2021-10-01 10:22:03.935  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : extractValueParams() - end
+2021-10-01 10:22:03.936  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : applyFilters() - end
+2021-10-01 10:22:04.016  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.VerbaleService                     : extractVerbaliList() - start
+2021-10-01 10:22:04.029  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.VerbaleService                     : extractVerbaliList() - end
+2021-10-01 10:22:04.029  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : performQuery() - connection closed
+2021-10-01 10:22:04.030  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : performQuery() - end
+2021-10-01 10:22:04.030  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.VerbaleService                     : getVerbali() - end
+2021-10-01 10:22:04.030  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.c.VerbaleController                  : getAll() - action performed
+2021-10-01 10:22:04.030  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.c.VerbaleController                  : getAll() - end
+2021-10-01 10:22:04.032  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-01 10:22:38.786  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.c.AuthController                     : login() - start
+2021-10-01 10:22:38.788  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.c.AuthController                     : Richieta con body [{"username":"admin","password":"admin"}]
+2021-10-01 10:22:38.788  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.h.UserHelper                         : login() - start
+2021-10-01 10:22:38.807  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.h.UserHelper                         : loadUserByUsername() - start
+2021-10-01 10:22:38.809  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.h.UserHelper                         : loadUserByUsername() - end
+2021-10-01 10:22:39.093  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-01 10:22:39.094  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-01 10:22:39.094  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.h.UserHelper                         : login() - end
+2021-10-01 10:22:39.095  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.s.UserService                        : getUserDTO() - start
+2021-10-01 10:22:39.099  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.s.UserService                        : toDto() - start
+2021-10-01 10:22:39.100  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.s.UserService                        : toDto() - end
+2021-10-01 10:22:39.102  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-01 10:22:39.116  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-01 10:22:39.117  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.c.AuthController                     : login() - login success
+2021-10-01 10:22:39.117  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.c.AuthController                     : login() - end
+2021-10-01 10:22:39.522  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-01 10:22:39.525  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-01 10:22:39.527  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-01 10:22:39.531  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.c.ArchiveController                  : getMyArchives() - start
+2021-10-01 10:22:39.531  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:22:39.531  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:22:39.538  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.c.ArchiveController                  : Richieta da utente [admin]
+2021-10-01 10:22:39.538  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-01 10:22:39.538  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:22:39.538  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:22:39.566  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-01 10:22:39.566  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.c.ArchiveController                  : getMyArchives() - end
+2021-10-01 10:22:39.570  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-01 10:22:39.909  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-01 10:22:39.910  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-01 10:22:39.911  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-01 10:22:39.912  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.c.ArchiveController                  : getMyArchives() - start
+2021-10-01 10:22:39.912  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:22:39.912  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:22:39.917  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.c.ArchiveController                  : Richieta da utente [admin]
+2021-10-01 10:22:39.917  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-01 10:22:39.917  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:22:39.917  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:22:39.929  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-01 10:22:39.930  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.c.ArchiveController                  : getMyArchives() - end
+2021-10-01 10:22:39.932  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-01 10:22:39.939  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-01 10:22:39.940  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-01 10:22:39.941  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-01 10:22:39.942  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.c.ArchiveController                  : getMyArchives() - start
+2021-10-01 10:22:39.942  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:22:39.942  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:22:39.946  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.c.ArchiveController                  : Richieta da utente [admin]
+2021-10-01 10:22:39.946  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-01 10:22:39.946  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:22:39.946  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:22:39.955  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-01 10:22:39.955  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.c.ArchiveController                  : getMyArchives() - end
+2021-10-01 10:22:39.958  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-01 10:22:43.768  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-01 10:22:43.769  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-01 10:22:43.770  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-01 10:22:43.771  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.c.VerbaleController                  : getAll() - start
+2021-10-01 10:22:43.772  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:22:43.772  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:22:43.776  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.c.VerbaleController                  : Richieta da utente [admin] per archivio: [5] con parametri: [{"filters":{},"pagination":[25,0]}]
+2021-10-01 10:22:43.776  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.UserService                        : preliminaryChecks() - start
+2021-10-01 10:22:43.776  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:22:43.776  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:22:43.782  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.UserService                        : userHasAccessToArchive() - start
+2021-10-01 10:22:43.782  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.UserService                        : userHasAccessToArchive() - end
+2021-10-01 10:22:43.785  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.UserService                        : preliminaryChecks() - end
+2021-10-01 10:22:43.788  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.VerbaleService                     : getVerbaliLength() - start
+2021-10-01 10:22:43.788  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.QueryBuilder                       : buildCountRows() - start
+2021-10-01 10:22:43.788  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.QueryBuilder                       : appendWhereCondition() - start
+2021-10-01 10:22:43.788  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.QueryBuilder                       : appendWhereCondition() - end
+2021-10-01 10:22:43.788  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.QueryBuilder                       : buildCountRows() - end
+2021-10-01 10:22:43.788  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : performQuery() - start
+2021-10-01 10:22:43.788  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : createConnection() - start
+2021-10-01 10:22:43.790  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : mapDriverClassName() - start
+2021-10-01 10:22:43.790  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : mapDriverClassName() - class name found
+2021-10-01 10:22:43.790  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : mapDriverClassName() - end
+2021-10-01 10:22:44.180  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : createConnection() - connection created
+2021-10-01 10:22:44.211  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : performQuery() - connection closed
+2021-10-01 10:22:44.211  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : performQuery() - end
+2021-10-01 10:22:44.211  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.VerbaleService                     : getVerbaliLength() - end
+2021-10-01 10:22:44.211  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.VerbaleService                     : populatePagination() - start
+2021-10-01 10:22:44.211  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.VerbaleService                     : populatePagination() - end
+2021-10-01 10:22:44.211  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.VerbaleService                     : getVerbali() - start
+2021-10-01 10:22:44.211  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.QueryBuilder                       : buildSearchQuery() - start
+2021-10-01 10:22:44.211  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.QueryBuilder                       : appendWhereCondition() - start
+2021-10-01 10:22:44.212  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.QueryBuilder                       : appendWhereCondition() - end
+2021-10-01 10:22:44.212  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.QueryBuilder                       : appendPagination() - start
+2021-10-01 10:22:44.212  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.QueryBuilder                       : appendPagination() - end
+2021-10-01 10:22:44.212  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.QueryBuilder                       : buildSearchQuery() - end
+2021-10-01 10:22:44.212  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : performQuery() - start
+2021-10-01 10:22:44.212  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : createConnection() - start
+2021-10-01 10:22:44.212  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : mapDriverClassName() - start
+2021-10-01 10:22:44.213  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : mapDriverClassName() - class name found
+2021-10-01 10:22:44.213  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : mapDriverClassName() - end
+2021-10-01 10:22:44.584  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : createConnection() - connection created
+2021-10-01 10:22:44.617  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.VerbaleService                     : extractVerbaliList() - start
+2021-10-01 10:22:44.631  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.VerbaleService                     : extractVerbaliList() - end
+2021-10-01 10:22:44.631  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : performQuery() - connection closed
+2021-10-01 10:22:44.631  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.DatabaseHelper                     : performQuery() - end
+2021-10-01 10:22:44.631  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.VerbaleService                     : getVerbali() - end
+2021-10-01 10:22:44.632  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.c.VerbaleController                  : getAll() - action performed
+2021-10-01 10:22:44.632  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.c.VerbaleController                  : getAll() - end
+2021-10-01 10:22:44.634  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-01 10:22:51.617  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-01 10:22:51.619  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-01 10:22:51.621  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-01 10:22:51.623  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.c.VerbaleController                  : getAll() - start
+2021-10-01 10:22:51.623  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:22:51.623  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:22:51.630  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.c.VerbaleController                  : Richieta da utente [admin] per archivio: [5] con parametri: [{"filters":{"numeroAccesso":200900000003},"pagination":[25,0]}]
+2021-10-01 10:22:51.631  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.UserService                        : preliminaryChecks() - start
+2021-10-01 10:22:51.631  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:22:51.631  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:22:51.636  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.UserService                        : userHasAccessToArchive() - start
+2021-10-01 10:22:51.636  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.UserService                        : userHasAccessToArchive() - end
+2021-10-01 10:22:51.639  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.UserService                        : preliminaryChecks() - end
+2021-10-01 10:22:51.642  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.VerbaleService                     : getVerbaliLength() - start
+2021-10-01 10:22:51.643  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : buildCountRows() - start
+2021-10-01 10:22:51.643  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : appendWhereCondition() - start
+2021-10-01 10:22:51.643  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : appendWhereCondition() - end
+2021-10-01 10:22:51.643  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : buildCountRows() - end
+2021-10-01 10:22:51.643  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : performQuery() - start
+2021-10-01 10:22:51.643  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : createConnection() - start
+2021-10-01 10:22:51.645  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : mapDriverClassName() - start
+2021-10-01 10:22:51.645  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : mapDriverClassName() - class name found
+2021-10-01 10:22:51.645  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : mapDriverClassName() - end
+2021-10-01 10:22:52.009  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : createConnection() - connection created
+2021-10-01 10:22:52.010  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : applyFilters() - start
+2021-10-01 10:22:52.010  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : extractValueParams() - start
+2021-10-01 10:22:52.010  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : getValue() - start
+2021-10-01 10:22:52.010  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : getValue() - end
+2021-10-01 10:22:52.010  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : extractValueParams() - end
+2021-10-01 10:22:52.010  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : applyFilters() - end
+2021-10-01 10:22:52.041  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : performQuery() - connection closed
+2021-10-01 10:22:52.041  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : performQuery() - end
+2021-10-01 10:22:52.041  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.VerbaleService                     : getVerbaliLength() - end
+2021-10-01 10:22:52.041  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.VerbaleService                     : populatePagination() - start
+2021-10-01 10:22:52.041  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.VerbaleService                     : populatePagination() - end
+2021-10-01 10:22:52.042  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.VerbaleService                     : getVerbali() - start
+2021-10-01 10:22:52.042  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : buildSearchQuery() - start
+2021-10-01 10:22:52.042  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : appendWhereCondition() - start
+2021-10-01 10:22:52.042  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : appendWhereCondition() - end
+2021-10-01 10:22:52.042  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : appendPagination() - start
+2021-10-01 10:22:52.042  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : appendPagination() - end
+2021-10-01 10:22:52.043  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : buildSearchQuery() - end
+2021-10-01 10:22:52.043  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : performQuery() - start
+2021-10-01 10:22:52.043  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : createConnection() - start
+2021-10-01 10:22:52.043  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : mapDriverClassName() - start
+2021-10-01 10:22:52.043  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : mapDriverClassName() - class name found
+2021-10-01 10:22:52.043  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : mapDriverClassName() - end
+2021-10-01 10:22:52.406  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : createConnection() - connection created
+2021-10-01 10:22:52.406  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : applyFilters() - start
+2021-10-01 10:22:52.407  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : extractValueParams() - start
+2021-10-01 10:22:52.407  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : getValue() - start
+2021-10-01 10:22:52.407  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : getValue() - end
+2021-10-01 10:22:52.407  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : extractValueParams() - end
+2021-10-01 10:22:52.407  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.QueryBuilder                       : applyFilters() - end
+2021-10-01 10:22:52.442  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.VerbaleService                     : extractVerbaliList() - start
+2021-10-01 10:22:52.443  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.VerbaleService                     : extractVerbaliList() - end
+2021-10-01 10:22:52.444  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : performQuery() - connection closed
+2021-10-01 10:22:52.444  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.DatabaseHelper                     : performQuery() - end
+2021-10-01 10:22:52.445  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.VerbaleService                     : getVerbali() - end
+2021-10-01 10:22:52.445  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.c.VerbaleController                  : getAll() - action performed
+2021-10-01 10:22:52.445  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.c.VerbaleController                  : getAll() - end
+2021-10-01 10:22:52.449  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-01 10:22:57.641  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-01 10:22:57.644  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-01 10:22:57.645  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-01 10:22:57.647  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.c.VerbaleController                  : getAll() - start
+2021-10-01 10:22:57.648  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:22:57.648  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:22:57.657  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.c.VerbaleController                  : Richieta da utente [admin] per archivio: [5] con parametri: [{"filters":{"cognome":"mollica"},"pagination":[25,0]}]
+2021-10-01 10:22:57.657  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.s.UserService                        : preliminaryChecks() - start
+2021-10-01 10:22:57.657  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:22:57.657  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:22:57.667  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.s.UserService                        : userHasAccessToArchive() - start
+2021-10-01 10:22:57.668  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.s.UserService                        : userHasAccessToArchive() - end
+2021-10-01 10:22:57.671  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.s.UserService                        : preliminaryChecks() - end
+2021-10-01 10:22:57.674  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.s.VerbaleService                     : getVerbaliLength() - start
+2021-10-01 10:22:57.674  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.QueryBuilder                       : buildCountRows() - start
+2021-10-01 10:22:57.675  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.QueryBuilder                       : appendWhereCondition() - start
+2021-10-01 10:22:57.675  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.QueryBuilder                       : appendWhereCondition() - end
+2021-10-01 10:22:57.675  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.QueryBuilder                       : buildCountRows() - end
+2021-10-01 10:22:57.675  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.DatabaseHelper                     : performQuery() - start
+2021-10-01 10:22:57.675  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.DatabaseHelper                     : createConnection() - start
+2021-10-01 10:22:57.676  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.DatabaseHelper                     : mapDriverClassName() - start
+2021-10-01 10:22:57.677  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.DatabaseHelper                     : mapDriverClassName() - class name found
+2021-10-01 10:22:57.677  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.DatabaseHelper                     : mapDriverClassName() - end
+2021-10-01 10:22:58.081  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.DatabaseHelper                     : createConnection() - connection created
+2021-10-01 10:22:58.082  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.QueryBuilder                       : applyFilters() - start
+2021-10-01 10:22:58.083  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.QueryBuilder                       : extractValueParams() - start
+2021-10-01 10:22:58.083  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.QueryBuilder                       : getValue() - start
+2021-10-01 10:22:58.083  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.QueryBuilder                       : getValue() - end
+2021-10-01 10:22:58.083  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.QueryBuilder                       : extractValueParams() - end
+2021-10-01 10:22:58.083  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.QueryBuilder                       : applyFilters() - end
+2021-10-01 10:22:58.113  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.DatabaseHelper                     : performQuery() - connection closed
+2021-10-01 10:22:58.113  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.DatabaseHelper                     : performQuery() - end
+2021-10-01 10:22:58.113  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.s.VerbaleService                     : getVerbaliLength() - end
+2021-10-01 10:22:58.113  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.s.VerbaleService                     : populatePagination() - start
+2021-10-01 10:22:58.113  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.s.VerbaleService                     : populatePagination() - end
+2021-10-01 10:22:58.113  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.s.VerbaleService                     : getVerbali() - start
+2021-10-01 10:22:58.114  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.QueryBuilder                       : buildSearchQuery() - start
+2021-10-01 10:22:58.114  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.QueryBuilder                       : appendWhereCondition() - start
+2021-10-01 10:22:58.114  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.QueryBuilder                       : appendWhereCondition() - end
+2021-10-01 10:22:58.114  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.QueryBuilder                       : appendPagination() - start
+2021-10-01 10:22:58.114  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.QueryBuilder                       : appendPagination() - end
+2021-10-01 10:22:58.116  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.QueryBuilder                       : buildSearchQuery() - end
+2021-10-01 10:22:58.117  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.DatabaseHelper                     : performQuery() - start
+2021-10-01 10:22:58.117  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.DatabaseHelper                     : createConnection() - start
+2021-10-01 10:22:58.118  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.DatabaseHelper                     : mapDriverClassName() - start
+2021-10-01 10:22:58.118  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.DatabaseHelper                     : mapDriverClassName() - class name found
+2021-10-01 10:22:58.118  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.DatabaseHelper                     : mapDriverClassName() - end
+2021-10-01 10:22:58.476  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.DatabaseHelper                     : createConnection() - connection created
+2021-10-01 10:22:58.478  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.QueryBuilder                       : applyFilters() - start
+2021-10-01 10:22:58.479  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.QueryBuilder                       : extractValueParams() - start
+2021-10-01 10:22:58.479  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.QueryBuilder                       : getValue() - start
+2021-10-01 10:22:58.479  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.QueryBuilder                       : getValue() - end
+2021-10-01 10:22:58.479  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.QueryBuilder                       : extractValueParams() - end
+2021-10-01 10:22:58.479  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.QueryBuilder                       : applyFilters() - end
+2021-10-01 10:22:58.510  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.s.VerbaleService                     : extractVerbaliList() - start
+2021-10-01 10:22:58.521  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.s.VerbaleService                     : extractVerbaliList() - end
+2021-10-01 10:22:58.521  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.DatabaseHelper                     : performQuery() - connection closed
+2021-10-01 10:22:58.522  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.DatabaseHelper                     : performQuery() - end
+2021-10-01 10:22:58.522  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.s.VerbaleService                     : getVerbali() - end
+2021-10-01 10:22:58.522  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.c.VerbaleController                  : getAll() - action performed
+2021-10-01 10:22:58.522  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.c.VerbaleController                  : getAll() - end
+2021-10-01 10:22:58.525  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-01 10:27:29.645  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-01 10:27:29.665  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-01 10:27:29.666  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-01 10:27:29.680  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.c.ArchiveController                  : getMyArchives() - start
+2021-10-01 10:27:29.680  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:27:29.680  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:27:29.730  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.c.ArchiveController                  : Richieta da utente [admin]
+2021-10-01 10:27:29.730  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-01 10:27:29.731  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:27:29.731  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:27:29.747  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-01 10:27:29.747  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.c.ArchiveController                  : getMyArchives() - end
+2021-10-01 10:27:29.760  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-01 10:34:53.623  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-01 10:34:53.636  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-01 10:34:53.637  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-01 10:34:53.653  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.c.VerbaleController                  : getAll() - start
+2021-10-01 10:34:53.653  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:34:53.653  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:34:53.681  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.c.VerbaleController                  : Richieta da utente [admin] per archivio: [5] con parametri: [{"filters":{},"pagination":[25,0]}]
+2021-10-01 10:34:53.681  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.UserService                        : preliminaryChecks() - start
+2021-10-01 10:34:53.681  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:34:53.681  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:34:53.689  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.UserService                        : userHasAccessToArchive() - start
+2021-10-01 10:34:53.690  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.UserService                        : userHasAccessToArchive() - end
+2021-10-01 10:34:53.695  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.UserService                        : preliminaryChecks() - end
+2021-10-01 10:34:53.698  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.VerbaleService                     : getVerbaliLength() - start
+2021-10-01 10:34:53.698  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.QueryBuilder                       : buildCountRows() - start
+2021-10-01 10:34:53.698  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.QueryBuilder                       : appendWhereCondition() - start
+2021-10-01 10:34:53.698  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.QueryBuilder                       : appendWhereCondition() - end
+2021-10-01 10:34:53.698  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.QueryBuilder                       : buildCountRows() - end
+2021-10-01 10:34:53.698  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.DatabaseHelper                     : performQuery() - start
+2021-10-01 10:34:53.698  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.DatabaseHelper                     : createConnection() - start
+2021-10-01 10:34:53.704  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.DatabaseHelper                     : mapDriverClassName() - start
+2021-10-01 10:34:53.704  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.DatabaseHelper                     : mapDriverClassName() - class name found
+2021-10-01 10:34:53.704  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.DatabaseHelper                     : mapDriverClassName() - end
+2021-10-01 10:34:54.276  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.DatabaseHelper                     : createConnection() - connection created
+2021-10-01 10:34:54.308  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.DatabaseHelper                     : performQuery() - connection closed
+2021-10-01 10:34:54.308  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.DatabaseHelper                     : performQuery() - end
+2021-10-01 10:34:54.308  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.VerbaleService                     : getVerbaliLength() - end
+2021-10-01 10:34:54.309  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.VerbaleService                     : populatePagination() - start
+2021-10-01 10:34:54.309  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.VerbaleService                     : populatePagination() - end
+2021-10-01 10:34:54.309  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.VerbaleService                     : getVerbali() - start
+2021-10-01 10:34:54.309  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.QueryBuilder                       : buildSearchQuery() - start
+2021-10-01 10:34:54.309  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.QueryBuilder                       : appendWhereCondition() - start
+2021-10-01 10:34:54.309  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.QueryBuilder                       : appendWhereCondition() - end
+2021-10-01 10:34:54.310  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.QueryBuilder                       : appendPagination() - start
+2021-10-01 10:34:54.311  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.QueryBuilder                       : appendPagination() - end
+2021-10-01 10:34:54.311  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.QueryBuilder                       : buildSearchQuery() - end
+2021-10-01 10:34:54.311  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.DatabaseHelper                     : performQuery() - start
+2021-10-01 10:34:54.311  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.DatabaseHelper                     : createConnection() - start
+2021-10-01 10:34:54.311  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.DatabaseHelper                     : mapDriverClassName() - start
+2021-10-01 10:34:54.311  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.DatabaseHelper                     : mapDriverClassName() - class name found
+2021-10-01 10:34:54.311  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.DatabaseHelper                     : mapDriverClassName() - end
+2021-10-01 10:34:54.663  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.DatabaseHelper                     : createConnection() - connection created
+2021-10-01 10:34:54.696  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.VerbaleService                     : extractVerbaliList() - start
+2021-10-01 10:34:54.712  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.VerbaleService                     : extractVerbaliList() - end
+2021-10-01 10:34:54.713  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.DatabaseHelper                     : performQuery() - connection closed
+2021-10-01 10:34:54.713  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.DatabaseHelper                     : performQuery() - end
+2021-10-01 10:34:54.713  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.VerbaleService                     : getVerbali() - end
+2021-10-01 10:34:54.713  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.c.VerbaleController                  : getAll() - action performed
+2021-10-01 10:34:54.713  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.c.VerbaleController                  : getAll() - end
+2021-10-01 10:34:54.718  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-01 10:44:28.858  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-01 10:44:28.875  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-01 10:44:28.876  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-01 10:44:28.892  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.c.VerbaleController                  : getAll() - start
+2021-10-01 10:44:28.892  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:44:28.892  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:44:28.923  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.c.VerbaleController                  : Richieta da utente [admin] per archivio: [5] con parametri: [{"filters":{"dataNascitaStart":"2021-08-02T22:00:00.000Z","dataNascitaEnd":"2021-08-25T22:00:00.000Z"},"pagination":[25,0]}]
+2021-10-01 10:44:28.924  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.UserService                        : preliminaryChecks() - start
+2021-10-01 10:44:28.924  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-01 10:44:28.924  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-01 10:44:28.933  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.UserService                        : userHasAccessToArchive() - start
+2021-10-01 10:44:28.933  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.UserService                        : userHasAccessToArchive() - end
+2021-10-01 10:44:28.937  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.UserService                        : preliminaryChecks() - end
+2021-10-01 10:44:28.947  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.VerbaleService                     : getVerbaliLength() - start
+2021-10-01 10:44:28.947  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : buildCountRows() - start
+2021-10-01 10:44:28.947  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : appendWhereCondition() - start
+2021-10-01 10:44:28.948  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : appendWhereCondition() - end
+2021-10-01 10:44:28.948  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : buildCountRows() - end
+2021-10-01 10:44:28.948  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : performQuery() - start
+2021-10-01 10:44:28.948  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : createConnection() - start
+2021-10-01 10:44:28.950  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : mapDriverClassName() - start
+2021-10-01 10:44:28.950  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : mapDriverClassName() - class name found
+2021-10-01 10:44:28.950  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : mapDriverClassName() - end
+2021-10-01 10:44:29.359  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : createConnection() - connection created
+2021-10-01 10:44:29.359  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : applyFilters() - start
+2021-10-01 10:44:29.359  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : extractValueParams() - start
+2021-10-01 10:44:29.359  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : getValue() - start
+2021-10-01 10:44:29.360  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : getValue() - end
+2021-10-01 10:44:29.360  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : getValue() - start
+2021-10-01 10:44:29.360  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : getValue() - end
+2021-10-01 10:44:29.360  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : extractValueParams() - end
+2021-10-01 10:44:29.360  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.QueryBuilder                       : applyFilters() - end
+2021-10-01 10:44:29.548 ERROR MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.DatabaseHelper                     : performQuery() - query not executed: SELECT COUNT(*) as tot_accessi  FROM view_verbali vv  WHERE vv.data_nascita >= CAST( ? AS DATE) AND vv.data_nascita <= CAST( ? AS DATE);
+2021-10-01 10:44:29.643 ERROR MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.portaleps.exception.CustomException: Bad query] with root cause
+com.portaleps.exception.CustomException: Bad query
+	at com.portaleps.helper.DatabaseHelper.performQuery(DatabaseHelper.java:75)
+	at com.portaleps.service.VerbaleService.getVerbaliLength(VerbaleService.java:58)
+	at com.portaleps.controller.VerbaleController.getAll(VerbaleController.java:59)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:121)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at com.portaleps.security.JwtTokenFilter.doFilterInternal(JwtTokenFilter.java:49)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-10-01 10:47:05.428  INFO MacBook-Pro-di-Francesco.local --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-01 10:47:05.460  INFO MacBook-Pro-di-Francesco.local --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2021-10-01 10:47:05.500  INFO MacBook-Pro-di-Francesco.local --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.

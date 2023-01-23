@@ -1,0 +1,1 @@
+2021-09-30 10:47:37.206  INFO MacBook-Pro-di-Francesco.local --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'

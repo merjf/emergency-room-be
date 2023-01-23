@@ -1,0 +1,6 @@
+2021-10-13 02:10:12.228  WARN MBPdiFrancesco --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h13s728ms).
+2021-10-13 08:59:56.789  WARN MBPdiFrancesco --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6h49m44s593ms).
+2021-10-13 09:04:40.188  WARN MBPdiFrancesco --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m13s117ms).
+2021-10-13 09:07:52.243  INFO MBPdiFrancesco --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-13 09:07:52.276  INFO MBPdiFrancesco --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2021-10-13 09:07:52.323  INFO MBPdiFrancesco --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.

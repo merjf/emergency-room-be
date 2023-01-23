@@ -1,0 +1,354 @@
+2021-10-12 12:43:26.130  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.PortalepsApplication                 : Starting PortalepsApplication using Java 11.0.12 on MacBook-Pro-di-Francesco.local with PID 6342 (/Users/merjf/Documents/Work/Projects/Messina/Pronto Soccorso Messina/aspme-ps-repo/target/classes started by merjf in /Users/merjf/Documents/Work/Projects/Messina/Pronto Soccorso Messina/aspme-ps-repo)
+2021-10-12 12:43:26.140  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.PortalepsApplication                 : No active profile set, falling back to default profiles: default
+2021-10-12 12:43:26.957  INFO MacBook-Pro-di-Francesco.local --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-10-12 12:43:27.037  INFO MacBook-Pro-di-Francesco.local --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 3 JPA repository interfaces.
+2021-10-12 12:43:27.368  INFO MacBook-Pro-di-Francesco.local --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3596b249' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-12 12:43:27.372  INFO MacBook-Pro-di-Francesco.local --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-10-12 12:43:27.632  INFO MacBook-Pro-di-Francesco.local --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-10-12 12:43:27.643  INFO MacBook-Pro-di-Francesco.local --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2021-10-12 12:43:27.644  INFO MacBook-Pro-di-Francesco.local --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-10-12 12:43:27.644  INFO MacBook-Pro-di-Francesco.local --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-10-12 12:43:27.735  INFO MacBook-Pro-di-Francesco.local --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-10-12 12:43:27.735  INFO MacBook-Pro-di-Francesco.local --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1538 ms
+2021-10-12 12:43:27.915  INFO MacBook-Pro-di-Francesco.local --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-10-12 12:43:27.983  INFO MacBook-Pro-di-Francesco.local --- [           main] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-10-12 12:43:28.152  INFO MacBook-Pro-di-Francesco.local --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-10-12 12:43:28.262  INFO MacBook-Pro-di-Francesco.local --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-10-12 12:43:28.267  WARN MacBook-Pro-di-Francesco.local --- [           main] c.z.h.u.DriverDataSource                 : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-10-12 12:43:28.590  INFO MacBook-Pro-di-Francesco.local --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-10-12 12:43:28.633  INFO MacBook-Pro-di-Francesco.local --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-10-12 12:43:29.359  INFO MacBook-Pro-di-Francesco.local --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-10-12 12:43:29.368  INFO MacBook-Pro-di-Francesco.local --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 12:43:29.907  WARN MacBook-Pro-di-Francesco.local --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-10-12 12:43:29.954  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.s.WebSecurityConfig                  : authenticationManagerBean() - start
+2021-10-12 12:43:29.954  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.s.WebSecurityConfig                  : authenticationManagerBean() - end
+2021-10-12 12:43:30.136  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.s.WebSecurityConfig                  : configure(http) - start
+2021-10-12 12:43:30.138  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.s.JwtTokenFilterConfigurer           : JwtTokenFilterConfigurer() - start
+2021-10-12 12:43:30.138  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.s.JwtTokenFilterConfigurer           : JwtTokenFilterConfigurer() - end
+2021-10-12 12:43:30.138  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.s.WebSecurityConfig                  : configure(http) - end
+2021-10-12 12:43:30.139  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.s.WebSecurityConfig                  : configure(web) - start
+2021-10-12 12:43:30.139  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.s.WebSecurityConfig                  : configure(http) - end
+2021-10-12 12:43:30.140  INFO MacBook-Pro-di-Francesco.local --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/v2/api-docs'] with []
+2021-10-12 12:43:30.140  INFO MacBook-Pro-di-Francesco.local --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/swagger-resources/**'] with []
+2021-10-12 12:43:30.141  INFO MacBook-Pro-di-Francesco.local --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/swagger-ui.html'] with []
+2021-10-12 12:43:30.141  INFO MacBook-Pro-di-Francesco.local --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/configuration/**'] with []
+2021-10-12 12:43:30.141  INFO MacBook-Pro-di-Francesco.local --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/webjars/**'] with []
+2021-10-12 12:43:30.141  INFO MacBook-Pro-di-Francesco.local --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/auth/login'] with []
+2021-10-12 12:43:30.141  INFO MacBook-Pro-di-Francesco.local --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/h2-console/**/**'] with []
+2021-10-12 12:43:30.202  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.s.WebSecurityConfig                  : addCorsMappings() - start
+2021-10-12 12:43:30.203  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.s.WebSecurityConfig                  : addCorsMappings() - end
+2021-10-12 12:43:30.323  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.s.JwtTokenFilterConfigurer           : configure() - start
+2021-10-12 12:43:30.324  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.s.JwtTokenFilterConfigurer           : configure() - end
+2021-10-12 12:43:30.324  INFO MacBook-Pro-di-Francesco.local --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62eb918, org.springframework.security.web.context.SecurityContextPersistenceFilter@499445d2, org.springframework.security.web.header.HeaderWriterFilter@17d83fe4, org.springframework.web.filter.CorsFilter@21a462ce, org.springframework.security.web.authentication.logout.LogoutFilter@5c20841d, com.portaleps.security.JwtTokenFilter@37e28b20, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d529dbf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@e356940, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31428f76, org.springframework.security.web.session.SessionManagementFilter@753c7411, org.springframework.security.web.access.ExceptionTranslationFilter@2786b644, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6eff05e7]
+2021-10-12 12:43:30.522  INFO MacBook-Pro-di-Francesco.local --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2021-10-12 12:43:30.551  INFO MacBook-Pro-di-Francesco.local --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-10-12 12:43:30.558  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.PortalepsApplication                 : Started PortalepsApplication in 5.267 seconds (JVM running for 11.396)
+2021-10-12 12:43:31.103  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.PortalepsApplication                 : initFolders() - start
+2021-10-12 12:43:31.104  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.PortalepsApplication                 : initFolders() - folders created
+2021-10-12 12:43:31.104  INFO MacBook-Pro-di-Francesco.local --- [           main] c.p.PortalepsApplication                 : initFolders() - end
+2021-10-12 12:46:14.564  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-12 12:46:14.566  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-10-12 12:46:14.570  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 4 ms
+2021-10-12 12:46:14.721  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.c.AuthController                     : login() - start
+2021-10-12 12:46:14.735  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.c.AuthController                     : Richieta con body [{"username":"admin","password":"admin"}]
+2021-10-12 12:46:14.736  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.h.UserHelper                         : login() - start
+2021-10-12 12:46:15.055  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.h.UserHelper                         : loadUserByUsername() - start
+2021-10-12 12:46:15.057  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.h.UserHelper                         : loadUserByUsername() - end
+2021-10-12 12:46:15.413  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-12 12:46:15.439  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-12 12:46:15.439  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.h.UserHelper                         : login() - end
+2021-10-12 12:46:15.443  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.s.UserService                        : getUserDTO() - start
+2021-10-12 12:46:15.454  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.s.UserService                        : toDto() - start
+2021-10-12 12:46:15.455  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.s.UserService                        : toDto() - end
+2021-10-12 12:46:15.499  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-12 12:46:15.505  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-12 12:46:15.505  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.c.AuthController                     : login() - login success
+2021-10-12 12:46:15.505  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.c.AuthController                     : login() - end
+2021-10-12 12:46:15.600  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-12 12:46:15.601  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-12 12:46:15.602  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-12 12:46:15.612  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.c.ArchiveController                  : getMyArchives() - start
+2021-10-12 12:46:15.612  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 12:46:15.613  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 12:46:15.616  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.c.ArchiveController                  : Richieta da utente [admin]
+2021-10-12 12:46:15.617  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-12 12:46:15.617  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 12:46:15.617  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 12:46:15.622  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-12 12:46:15.622  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.c.ArchiveController                  : getMyArchives() - end
+2021-10-12 12:46:15.637  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-12 12:46:15.842  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-12 12:46:15.844  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-12 12:46:15.845  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-12 12:46:15.846  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.c.ArchiveController                  : getMyArchives() - start
+2021-10-12 12:46:15.846  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 12:46:15.847  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 12:46:15.852  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.c.ArchiveController                  : Richieta da utente [admin]
+2021-10-12 12:46:15.853  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-12 12:46:15.853  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 12:46:15.853  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 12:46:15.857  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-12 12:46:15.857  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.c.ArchiveController                  : getMyArchives() - end
+2021-10-12 12:46:15.859  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-12 12:46:16.698  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-12 12:46:16.700  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-12 12:46:16.701  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-12 12:46:16.702  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-12 12:46:16.703  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-12 12:46:16.704  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-12 12:46:16.705  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.c.ArchiveController                  : getAllArchives() - start
+2021-10-12 12:46:16.706  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 12:46:16.706  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 12:46:16.712  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.c.UserController                     : getUserList() - start
+2021-10-12 12:46:16.712  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 12:46:16.712  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 12:46:16.715  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.c.ArchiveController                  : Richieta da utente [admin]
+2021-10-12 12:46:16.716  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.UserHelper                         : isAdmin() - start
+2021-10-12 12:46:16.716  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.UserHelper                         : isAdmin() - end
+2021-10-12 12:46:16.717  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-12 12:46:16.718  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 12:46:16.718  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 12:46:16.722  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.c.UserController                     : Richieta da utente [admin]
+2021-10-12 12:46:16.722  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.UserHelper                         : isAdmin() - start
+2021-10-12 12:46:16.722  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.UserHelper                         : isAdmin() - end
+2021-10-12 12:46:16.723  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.UserService                        : getUserList() - start
+2021-10-12 12:46:16.724  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-12 12:46:16.726  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-12 12:46:16.741  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.UserService                        : toDto() - start
+2021-10-12 12:46:16.741  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.UserService                        : toDto() - end
+2021-10-12 12:46:16.742  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-12 12:46:16.744  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-12 12:46:16.744  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.UserService                        : getUserList() - end
+2021-10-12 12:46:16.744  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.c.UserController                     : getUserList() - user list found
+2021-10-12 12:46:16.744  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.c.UserController                     : getUserList() - end
+2021-10-12 12:46:16.748  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-12 12:47:47.858  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-12 12:47:47.860  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-12 12:47:47.861  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-12 12:47:47.863  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.c.ArchiveController                  : getMyArchives() - start
+2021-10-12 12:47:47.863  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 12:47:47.863  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 12:47:47.869  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.c.ArchiveController                  : Richieta da utente [admin]
+2021-10-12 12:47:47.869  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-12 12:47:47.869  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 12:47:47.869  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 12:47:47.874  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-12 12:47:47.874  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.c.ArchiveController                  : getMyArchives() - end
+2021-10-12 12:47:47.876  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-12 12:47:47.900  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-12 12:47:47.905  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-12 12:47:47.905  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-12 12:47:47.906  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-12 12:47:47.907  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-12 12:47:47.908  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-12 12:47:47.908  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.c.UserController                     : getUserList() - start
+2021-10-12 12:47:47.908  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 12:47:47.908  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 12:47:47.909  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.c.ArchiveController                  : getAllArchives() - start
+2021-10-12 12:47:47.909  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 12:47:47.910  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 12:47:47.912  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.c.UserController                     : Richieta da utente [admin]
+2021-10-12 12:47:47.912  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.h.UserHelper                         : isAdmin() - start
+2021-10-12 12:47:47.912  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.h.UserHelper                         : isAdmin() - end
+2021-10-12 12:47:47.912  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.s.UserService                        : getUserList() - start
+2021-10-12 12:47:47.914  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.c.ArchiveController                  : Richieta da utente [admin]
+2021-10-12 12:47:47.914  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : isAdmin() - start
+2021-10-12 12:47:47.914  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : isAdmin() - end
+2021-10-12 12:47:47.915  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-12 12:47:47.915  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 12:47:47.915  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 12:47:47.919  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.s.UserService                        : toDto() - start
+2021-10-12 12:47:47.919  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.s.UserService                        : toDto() - end
+2021-10-12 12:47:47.920  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-12 12:47:47.920  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-12 12:47:47.922  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-12 12:47:47.922  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-12 12:47:47.922  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.s.UserService                        : getUserList() - end
+2021-10-12 12:47:47.922  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.c.UserController                     : getUserList() - user list found
+2021-10-12 12:47:47.922  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.c.UserController                     : getUserList() - end
+2021-10-12 12:47:47.924  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-3] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-12 12:47:54.990  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-12 12:47:54.992  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-12 12:47:54.993  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-12 12:47:54.994  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.c.UserController                     : getUserList() - start
+2021-10-12 12:47:54.995  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 12:47:54.995  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 12:47:54.999  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.c.UserController                     : Richieta da utente [admin]
+2021-10-12 12:47:54.999  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : isAdmin() - start
+2021-10-12 12:47:54.999  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : isAdmin() - end
+2021-10-12 12:47:54.999  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.UserService                        : getUserList() - start
+2021-10-12 12:47:55.007  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.UserService                        : toDto() - start
+2021-10-12 12:47:55.007  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.UserService                        : toDto() - end
+2021-10-12 12:47:55.008  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-12 12:47:55.010  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-12 12:47:55.010  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.UserService                        : getUserList() - end
+2021-10-12 12:47:55.011  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.c.UserController                     : getUserList() - user list found
+2021-10-12 12:47:55.011  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.c.UserController                     : getUserList() - end
+2021-10-12 12:47:55.012  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-12 12:47:57.816  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.c.AuthController                     : login() - start
+2021-10-12 12:47:57.817  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.c.AuthController                     : Richieta con body [{"username":"admin","password":"admin"}]
+2021-10-12 12:47:57.817  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.UserHelper                         : login() - start
+2021-10-12 12:47:57.820  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.UserHelper                         : loadUserByUsername() - start
+2021-10-12 12:47:57.822  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.UserHelper                         : loadUserByUsername() - end
+2021-10-12 12:47:58.100  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-12 12:47:58.102  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-12 12:47:58.102  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.UserHelper                         : login() - end
+2021-10-12 12:47:58.102  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.UserService                        : getUserDTO() - start
+2021-10-12 12:47:58.108  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.UserService                        : toDto() - start
+2021-10-12 12:47:58.109  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.UserService                        : toDto() - end
+2021-10-12 12:47:58.109  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-12 12:47:58.111  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-12 12:47:58.111  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.c.AuthController                     : login() - login success
+2021-10-12 12:47:58.111  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.c.AuthController                     : login() - end
+2021-10-12 12:47:58.150  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-12 12:47:58.153  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-12 12:47:58.154  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-12 12:47:58.155  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.c.ArchiveController                  : getMyArchives() - start
+2021-10-12 12:47:58.155  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 12:47:58.156  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 12:47:58.161  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.c.ArchiveController                  : Richieta da utente [admin]
+2021-10-12 12:47:58.161  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-12 12:47:58.161  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 12:47:58.161  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 12:47:58.169  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-12 12:47:58.169  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.c.ArchiveController                  : getMyArchives() - end
+2021-10-12 12:47:58.171  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-7] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-12 12:47:58.358  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-12 12:47:58.359  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-12 12:47:58.360  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-12 12:47:58.361  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.c.ArchiveController                  : getMyArchives() - start
+2021-10-12 12:47:58.361  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 12:47:58.361  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 12:47:58.365  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.c.ArchiveController                  : Richieta da utente [admin]
+2021-10-12 12:47:58.365  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-12 12:47:58.365  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 12:47:58.365  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 12:47:58.368  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-12 12:47:58.368  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.c.ArchiveController                  : getMyArchives() - end
+2021-10-12 12:47:58.370  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-9] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-12 12:47:59.289  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-12 12:47:59.290  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-12 12:47:59.291  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-12 12:47:59.291  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-12 12:47:59.292  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-12 12:47:59.292  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-12 12:47:59.293  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.c.UserController                     : getUserList() - start
+2021-10-12 12:47:59.293  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.c.ArchiveController                  : getAllArchives() - start
+2021-10-12 12:47:59.293  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 12:47:59.293  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 12:47:59.293  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 12:47:59.293  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 12:47:59.299  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.c.ArchiveController                  : Richieta da utente [admin]
+2021-10-12 12:47:59.299  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.c.UserController                     : Richieta da utente [admin]
+2021-10-12 12:47:59.299  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.h.UserHelper                         : isAdmin() - start
+2021-10-12 12:47:59.299  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.UserHelper                         : isAdmin() - start
+2021-10-12 12:47:59.299  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.h.UserHelper                         : isAdmin() - end
+2021-10-12 12:47:59.299  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.h.UserHelper                         : isAdmin() - end
+2021-10-12 12:47:59.299  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-12 12:47:59.299  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.UserService                        : getUserList() - start
+2021-10-12 12:47:59.299  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 12:47:59.299  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 12:47:59.302  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-12 12:47:59.303  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.UserService                        : toDto() - start
+2021-10-12 12:47:59.303  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.UserService                        : toDto() - end
+2021-10-12 12:47:59.304  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-12 12:47:59.304  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-1] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-12 12:47:59.307  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-12 12:47:59.308  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.UserService                        : getUserList() - end
+2021-10-12 12:47:59.311  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.c.UserController                     : getUserList() - user list found
+2021-10-12 12:47:59.311  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.c.UserController                     : getUserList() - end
+2021-10-12 12:47:59.313  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-8] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-12 12:48:10.377  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-12 12:48:10.379  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-12 12:48:10.380  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-12 12:48:10.381  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.c.ArchiveController                  : getMyArchives() - start
+2021-10-12 12:48:10.382  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 12:48:10.382  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 12:48:10.388  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.c.ArchiveController                  : Richieta da utente [admin]
+2021-10-12 12:48:10.388  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-12 12:48:10.388  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 12:48:10.388  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 12:48:10.423  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-12 12:48:10.426  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-12 12:48:10.427  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-12 12:48:10.430  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.c.UserController                     : getUserList() - start
+2021-10-12 12:48:10.430  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 12:48:10.430  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 12:48:10.431  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-12 12:48:10.432  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-12 12:48:10.433  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-12 12:48:10.434  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.c.ArchiveController                  : getAllArchives() - start
+2021-10-12 12:48:10.434  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 12:48:10.434  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 12:48:10.435  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.c.UserController                     : Richieta da utente [admin]
+2021-10-12 12:48:10.435  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.h.UserHelper                         : isAdmin() - start
+2021-10-12 12:48:10.435  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.h.UserHelper                         : isAdmin() - end
+2021-10-12 12:48:10.435  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.s.UserService                        : getUserList() - start
+2021-10-12 12:48:10.440  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.s.UserService                        : toDto() - start
+2021-10-12 12:48:10.440  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.s.UserService                        : toDto() - end
+2021-10-12 12:48:10.441  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.c.ArchiveController                  : Richieta da utente [admin]
+2021-10-12 12:48:10.441  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : isAdmin() - start
+2021-10-12 12:48:10.441  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : isAdmin() - end
+2021-10-12 12:48:10.441  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-12 12:48:10.442  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-12 12:48:10.442  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 12:48:10.442  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 12:48:10.445  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-12 12:48:10.445  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.c.ArchiveController                  : getMyArchives() - end
+2021-10-12 12:48:10.446  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-12 12:48:10.446  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.s.UserService                        : getUserList() - end
+2021-10-12 12:48:10.447  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.c.UserController                     : getUserList() - user list found
+2021-10-12 12:48:10.447  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.c.UserController                     : getUserList() - end
+2021-10-12 12:48:10.449  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-12 12:48:10.454  INFO MacBook-Pro-di-Francesco.local --- [io-8080-exec-10] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-12 12:48:10.456  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-2] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-12 12:48:10.456  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-4] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-12 12:48:28.996  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-12 12:48:28.996  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-12 12:48:28.997  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-12 12:48:29.002  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.c.UserController                     : createNewUser() - start
+2021-10-12 12:48:29.003  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 12:48:29.003  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 12:48:29.015  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.c.UserController                     : Richieta da utente [admin] con parametri: [{"name":"Giorgio","surname":"Bianchi","username":"giorgio","email":"email@email","password":"Pass1234","roles":"ROLE_RESEARCHER","archives":[{"id":1,"name":"Taormina"}],"active":true}]
+2021-10-12 12:48:29.015  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : isAdmin() - start
+2021-10-12 12:48:29.015  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.h.UserHelper                         : isAdmin() - end
+2021-10-12 12:48:29.028  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.UserService                        : createNewUser() - start
+2021-10-12 12:48:29.028  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.UserService                        : checkIntegrityBody() - start
+2021-10-12 12:48:29.028  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.UserService                        : checkIntegrityBody() - end
+2021-10-12 12:48:29.030  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.UserService                        : storeUser() - start
+2021-10-12 12:48:29.325  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.UserService                        : storeUser() - end
+2021-10-12 12:48:29.325  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.UserService                        : toDto() - start
+2021-10-12 12:48:29.325  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.UserService                        : toDto() - end
+2021-10-12 12:48:29.325  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.UserService                        : storeAccessToArchives() - start
+2021-10-12 12:48:29.329  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-12 12:48:29.387  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.UserService                        : storeAccessToArchives() - end
+2021-10-12 12:48:29.388  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.UserService                        : createNewUser() - user createdcom.portaleps.dto.UserDTO@30f64595
+2021-10-12 12:48:29.388  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.UserService                        : createNewUser() - end
+2021-10-12 12:48:29.391  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.c.UserController                     : createNewUser() - user created
+2021-10-12 12:48:29.391  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.c.UserController                     : createNewUser() - end
+2021-10-12 12:48:29.394  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-5] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-12 12:48:29.503  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2021-10-12 12:48:29.504  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.UserHelper                         : loadUserByToken() - start
+2021-10-12 12:48:29.505  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.UserHelper                         : loadUserByToken() - end
+2021-10-12 12:48:29.506  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.c.UserController                     : getUserList() - start
+2021-10-12 12:48:29.506  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.UserHelper                         : getCurrentUser() - start
+2021-10-12 12:48:29.506  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.UserHelper                         : getCurrentUser() - end
+2021-10-12 12:48:29.509  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.c.UserController                     : Richieta da utente [admin]
+2021-10-12 12:48:29.509  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.UserHelper                         : isAdmin() - start
+2021-10-12 12:48:29.510  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.h.UserHelper                         : isAdmin() - end
+2021-10-12 12:48:29.510  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.UserService                        : getUserList() - start
+2021-10-12 12:48:29.514  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.UserService                        : toDto() - start
+2021-10-12 12:48:29.515  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.UserService                        : toDto() - end
+2021-10-12 12:48:29.515  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-12 12:48:29.518  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-12 12:48:29.518  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.UserService                        : toDto() - start
+2021-10-12 12:48:29.518  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.UserService                        : toDto() - end
+2021-10-12 12:48:29.519  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2021-10-12 12:48:29.520  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2021-10-12 12:48:29.520  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.UserService                        : getUserList() - end
+2021-10-12 12:48:29.521  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.c.UserController                     : getUserList() - user list found
+2021-10-12 12:48:29.521  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.c.UserController                     : getUserList() - end
+2021-10-12 12:48:29.522  INFO MacBook-Pro-di-Francesco.local --- [nio-8080-exec-6] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2021-10-12 12:49:14.547  INFO MacBook-Pro-di-Francesco.local --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-12 12:49:14.558  INFO MacBook-Pro-di-Francesco.local --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2021-10-12 12:49:14.595  INFO MacBook-Pro-di-Francesco.local --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.

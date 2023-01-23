@@ -1,0 +1,8 @@
+2021-10-10 11:11:38.720  WARN MacBook-Pro-di-Francesco.local --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12h1m10s379ms).
+2021-10-10 13:28:11.665  WARN MacBook-Pro-di-Francesco.local --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h16m32s955ms).
+2021-10-10 13:34:14.697  WARN MacBook-Pro-di-Francesco.local --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m2s993ms).
+2021-10-10 16:08:36.859  WARN MacBook-Pro-di-Francesco.local --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h43m51s572ms).
+2021-10-10 16:16:31.061  WARN MacBook-Pro-di-Francesco.local --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m54s208ms).
+2021-10-10 16:16:38.459  INFO MacBook-Pro-di-Francesco.local --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-10-10 16:16:38.531  INFO MacBook-Pro-di-Francesco.local --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2021-10-10 16:16:38.556  INFO MacBook-Pro-di-Francesco.local --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.

@@ -1,3 +1,3 @@
-# PortalePS
+# ASPME Ps repo
 
-Java / Spring ASPME Portal BE
+ASP ME PS

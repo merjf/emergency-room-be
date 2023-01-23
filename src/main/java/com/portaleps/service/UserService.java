@@ -1,69 +1,230 @@
 package com.portaleps.service;
 
-import com.portaleps.exception.CustomException;
-import com.portaleps.model.User;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.portaleps.dto.ArchiveDTO;
+import com.portaleps.dto.ResponseDto;
+import com.portaleps.dto.UserDTO;
+import com.portaleps.helper.UserHelper;
+import com.portaleps.model.entity.Archive;
+import com.portaleps.model.entity.Role;
+import com.portaleps.model.entity.User;
+import com.portaleps.repository.UserArchiveRepository;
 import com.portaleps.repository.UserRepository;
-import com.portaleps.security.JwtTokenProvider;
+import com.portaleps.model.response.UserResponse;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import javax.servlet.http.HttpServletRequest;
+import javax.transaction.Transactional;
+import java.util.*;
 
 @Service
-public class UserService {
+public class UserService{
+
+    private static final Logger LOGGER = LogManager.getLogger(UserService.class);
+
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private UserArchiveRepository userArchiveRepository;
 
     @Autowired
     private PasswordEncoder passwordEncoder;
 
     @Autowired
-    private JwtTokenProvider jwtTokenProvider;
+    private ArchiveService archiveService;
 
     @Autowired
-    private AuthenticationManager authenticationManager;
+    private ObjectMapper objectMapper;
 
-    public String login(String username, String password) {
-        try {
-            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
-            return jwtTokenProvider.createToken(username, userRepository.findByUsername(username).getRoles());
-        } catch (AuthenticationException e) {
-            throw new CustomException("Invalid username/password supplied", HttpStatus.UNPROCESSABLE_ENTITY);
+    @Autowired
+    private ModelMapper modelMapper;
+
+    @Autowired
+    private UserHelper userHelper;
+
+    public ResponseDto preliminaryChecks(Integer archiveId){
+        LOGGER.info("preliminaryChecks() - start");
+
+        User user = userHelper.getCurrentUser();
+        if(user != null && archiveId != null){
+            Archive archive = archiveService.getArchiveById(archiveId);
+            if(archive != null){
+                if(userHasAccessToArchive(user, archive)){
+                    LOGGER.info("preliminaryChecks() - end");
+                    return new ResponseDto(true, 200, "User allowed");
+                } else {
+                    LOGGER.info("preliminaryChecks() - end");
+                    return new ResponseDto(false, 401, "Archive not accessible by this user");
+                }
+            } else {
+                LOGGER.info("preliminaryChecks() - end");
+                return new ResponseDto(false, 404, "Archive not found");
+            }
+        } else {
+            LOGGER.info("preliminaryChecks() - end");
+            return new ResponseDto(false, 404, "User not found or archive not present");
         }
     }
 
-    public String signup(User user) {
-        if (!userRepository.existsByUsername(user.getUsername())) {
-            user.setPassword(passwordEncoder.encode(user.getPassword()));
-            userRepository.save(user);
-            return jwtTokenProvider.createToken(user.getUsername(), user.getRoles());
+    @Transactional
+    public UserResponse createOrModifyUser(ObjectNode body) {
+        LOGGER.info("createNewUser() - start");
+        UserResponse userResponse = new UserResponse();
+        if(!body.isEmpty() && checkIntegrityBody(body)){
+            if (!userRepository.existsByUsername(body.get("username").asText())) {
+                User user = storeUser(body, new User(), false);
+                UserDTO userDTO = toDto(user);
+                userDTO.setArchives(storeAccessToArchives(body, user));
+                userResponse.setUsers(Collections.singletonList(userDTO));
+                userResponse.setResponseDto(new ResponseDto(true, 200, "User has been created successfully"));
+                LOGGER.info("createNewUser() - user created" + userDTO.toString());
+            } else {
+                User user = storeUser(body, userRepository.findByUsername(body.get("username").asText()), true);
+                UserDTO userDTO = toDto(user);
+                userDTO.setArchives(storeAccessToArchives(body, user));
+                userResponse.setUsers(Collections.singletonList(userDTO));
+                userResponse.setResponseDto(new ResponseDto(true, 200, "User has been modified successfully"));
+                LOGGER.info("createNewUser() - user modified" + userDTO);
+            }
         } else {
-            throw new CustomException("Username is already in use", HttpStatus.UNPROCESSABLE_ENTITY);
+            userResponse.setUsers(new ArrayList<>());
+            userResponse.setResponseDto(new ResponseDto(false, 400, "Parameters not valid"));
+            LOGGER.error("createNewUser() - paramters not valid: " + body);
         }
+        LOGGER.info("createNewUser() - end");
+        return userResponse;
+    }
+
+    @Transactional
+    public UserResponse updatePassword(String password) {
+        LOGGER.info("updatePassword() - start");
+        User currentUser = userHelper.getCurrentUser();
+        currentUser.setPassword(passwordEncoder.encode(password));
+        currentUser.setChangePassword(false);
+        userRepository.saveAndFlush(currentUser);
+        UserDTO userDTO = toDto(currentUser);
+        userDTO.setArchives(archiveService.getArchivesByUser(Optional.of(currentUser)));
+        LOGGER.info("updatePassword() - end");
+        return new UserResponse(new ResponseDto(true, 200, "Password updated"), List.of(userDTO));
+    }
+
+    public List<UserDTO> getUserList(){
+        LOGGER.info("getUserList() - start");
+        List<UserDTO> users = new ArrayList<>();
+        userRepository.findAll()
+                .stream()
+                .forEach(user -> {
+                    UserDTO userDTO = toDto(user);
+                    userDTO.setArchives(archiveService.getArchivesByUser(Optional.of(user)));
+                    users.add(userDTO);
+                });
+        LOGGER.info("getUserList() - end");
+        return users;
+    }
+
+    public UserDTO getUserDTO(String username){
+        LOGGER.info("getUserDTO() - start");
+        if(userRepository.existsByUsername(username)){
+            User user = userRepository.findByUsername(username);
+            UserDTO userDTO = toDto(user);
+            userDTO.setArchives(archiveService.getArchivesByUser(Optional.of(user)));
+            return userDTO;
+        }
+        LOGGER.info("getUserDTO() - end");
+        return new UserDTO();
     }
 
     public void delete(String username) {
+        LOGGER.info("delete() - start");
         userRepository.deleteByUsername(username);
+        LOGGER.info("delete() - end");
     }
 
-    public User search(String username) {
-        User user = userRepository.findByUsername(username);
-        if (user == null) {
-            throw new CustomException("The user doesn't exist", HttpStatus.NOT_FOUND);
+    public UserDTO toDto(User user) {
+        LOGGER.info("toDto() - start");
+        LOGGER.info("toDto() - end");
+        return modelMapper.map(user, UserDTO.class);
+    }
+
+    public User toEntity(UserDTO userDTO) {
+        LOGGER.info("toDto() - start");
+        LOGGER.info("toDto() - end");
+        return modelMapper.map(userDTO, User.class);
+    }
+
+    // PRIVATE METHODS
+
+    private User storeUser(ObjectNode body, User user, boolean update){
+        LOGGER.info("storeUser() - start");
+        user.setEmail(body.get("email").asText());
+        user.setName(body.get("name").asText());
+        user.setSurname(body.get("surname").asText());
+        user.setUsername(body.get("username").asText());
+        user.setChangePassword(true);
+        List<Role> roles = new ArrayList<>();
+        roles.add(Role.valueOf(body.get("roles").asText()));
+        user.setRoles(roles);
+        if(update){
+            if(!body.get("password").asText().equalsIgnoreCase("********")){
+                user.setPassword(passwordEncoder.encode(body.get("password").asText()));
+            }
+        } else {
+            user.setPassword(passwordEncoder.encode(body.get("password").asText()));
         }
+        user.setActive(body.get("active").asBoolean());
+        userRepository.saveAndFlush(user);
+        LOGGER.info("storeUser() - end");
         return user;
     }
 
-    public User whoami(HttpServletRequest req) {
-        return userRepository.findByUsername(jwtTokenProvider.getUsername(jwtTokenProvider.resolveToken(req)));
+    private List<ArchiveDTO> storeAccessToArchives(ObjectNode body, User user){
+        LOGGER.info("storeAccessToArchives() - start");
+        List<ArchiveDTO> archives = new ArrayList<>();
+        List<Integer> archiveIds = new ArrayList<>();
+        for (JsonNode archiveItem : body.get("archives")) {
+            Archive archive = archiveService.getArchiveById(archiveItem.get("id").asInt());
+            archiveService.createUserAccessToArchives(user, archive);
+            archives.add(archiveService.toDto(archive));
+            archiveIds.add(archive.getId());
+        }
+        archiveService.clearOldAccessToArchives(user, archiveIds);
+        LOGGER.info("storeAccessToArchives() - end");
+        return archives;
     }
 
-    public String refresh(String username) {
-        return jwtTokenProvider.createToken(username, userRepository.findByUsername(username).getRoles());
+    private boolean checkIntegrityBody(ObjectNode body) {
+        LOGGER.info("checkIntegrityBody() - start");
+        LOGGER.info("checkIntegrityBody() - end");
+        return body.has("username") && body.has("password") && body.has("email") &&
+                body.has("roles") && body.has("archives") && body.has("active") &&
+                body.has("name") && body.has("surname");
+    }
+
+    private boolean userHasAccessToArchive(User user, Archive archive){
+        LOGGER.info("userHasAccessToArchive() - start");
+        LOGGER.info("userHasAccessToArchive() - end");
+        return userArchiveRepository.findByUserAndArchive(user, archive) != null;
+    }
+
+    private Role mapRole(int index){
+        LOGGER.info("mapRole() - start");
+        Role role;
+        switch (index){
+            case 0:
+                role = Role.ROLE_ADMIN;
+            case 1:
+                role = Role.ROLE_RESEARCHER;
+            default:
+                role = null;
+        }
+        LOGGER.info("mapRole() - end");
+        return role;
     }
 }

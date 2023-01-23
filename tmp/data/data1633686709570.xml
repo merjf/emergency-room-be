@@ -1,0 +1,135 @@
+<Document>
+  <nomeDottore>admin</nomeDottore>
+  <printingTime>2021/10/08, 11:10</printingTime>
+  <nomePresidio>Taormina</nomePresidio>
+  <paziente>
+    <numeroAccesso>200900000002</numeroAccesso>
+    <cognome>BONGIORNO</cognome>
+    <nome>CARMELO</nome>
+    <dataNascita>28/07/1983</dataNascita>
+    <sesso>M</sesso>
+    <codiceFiscale>BNGCML83L28I311S</codiceFiscale>
+    <statoCivile>0</statoCivile>
+    <comuneNascita>SANTA TERESA DI RIVA</comuneNascita>
+    <provinciaNascita>ME</provinciaNascita>
+    <codiceIstatNascita>083089</codiceIstatNascita>
+    <comuneResidenza>SANTA TERESA DI RIVA</comuneResidenza>
+    <provinciaResidenza>ME</provinciaResidenza>
+    <codiceIstatResidenza>083089</codiceIstatResidenza>
+    <indirizzo>VIA CIMITERO 48</indirizzo>
+    <regioneResidenza>SICILIA                       </regioneResidenza>
+    <cittadinanza>Italia</cittadinanza>
+    <asl>328</asl>
+  </paziente>
+  <accettazioneTriage>
+    <dataAccesso>18/05/2009, 10:29</dataAccesso>
+    <causaAccesso>Altro</causaAccesso>
+    <istitutoProvenienza/>
+    <eroganteServizio>SSN (onere a carico del Servizio Sanitario Nazionale per accessi che non prevedono il ticket)</eroganteServizio>
+    <esenzione/>
+    <mezzoArrivo>Autonomo</mezzoArrivo>
+    <targaMezzo/>
+    <problemaAccesso>Trauma</problemaAccesso>
+    <dettProblema>Incidente sul lavoro</dettProblema>
+    <luogoIncidente/>
+    <responsabilità>No</responsabilità>
+    <circostanze>riferisce  sostanza caustica occhio dx</circostanze>
+    <dataEvento/>
+    <note/>
+  </accettazioneTriage>
+  <cronologiaTriage>
+    <cronologiaTriage>
+      <colore>Verde</colore>
+      <nomeOperatore>Concetta Sterrantino</nomeOperatore>
+      <note/>
+      <dataValutazione>18/05/2009, 10:29</dataValutazione>
+    </cronologiaTriage>
+  </cronologiaTriage>
+  <cronologiaCondizioniCliniche>
+    <cronologiaCondizioniCliniche>
+      <info>Temperatura corporea</info>
+      <valore>NR</valore>
+      <valutatore>Concetta Sterrantino</valutatore>
+      <data>18/05/2009, 10:31</data>
+    </cronologiaCondizioniCliniche>
+    <cronologiaCondizioniCliniche>
+      <info>SpO2</info>
+      <valore>NR</valore>
+      <valutatore>Concetta Sterrantino</valutatore>
+      <data>18/05/2009, 10:31</data>
+    </cronologiaCondizioniCliniche>
+    <cronologiaCondizioniCliniche>
+      <info>F. C.</info>
+      <valore>NR</valore>
+      <valutatore>Concetta Sterrantino</valutatore>
+      <data>18/05/2009, 10:31</data>
+    </cronologiaCondizioniCliniche>
+    <cronologiaCondizioniCliniche>
+      <info>Pressione arteriosa</info>
+      <valore>NR</valore>
+      <valutatore>Concetta Sterrantino</valutatore>
+      <data>18/05/2009, 10:31</data>
+    </cronologiaCondizioniCliniche>
+    <cronologiaCondizioniCliniche>
+      <info>Dolore</info>
+      <valore>Moderato</valore>
+      <valutatore>Concetta Sterrantino</valutatore>
+      <data>18/05/2009, 10:31</data>
+    </cronologiaCondizioniCliniche>
+    <cronologiaCondizioniCliniche>
+      <info>Stato di coscienza</info>
+      <valore>Lucido-Orientato</valore>
+      <valutatore>Concetta Sterrantino</valutatore>
+      <data>18/05/2009, 10:31</data>
+    </cronologiaCondizioniCliniche>
+  </cronologiaCondizioniCliniche>
+  <cronologiaAccettazioneMedico>
+    <cronologiaAccettazioneMedico>
+      <dataCarico>18/05/2009</dataCarico>
+      <noteCarico></noteCarico>
+      <dataCessione>18/05/2009</dataCessione>
+      <noteCessione></noteCessione>
+      <medico>Umberto Prosperini</medico>
+    </cronologiaAccettazioneMedico>
+    <cronologiaAccettazioneMedico>
+      <dataCarico>18/05/2009</dataCarico>
+      <noteCarico></noteCarico>
+      <dataCessione>18/05/2009</dataCessione>
+      <noteCessione>Paziente dimesso</noteCessione>
+      <medico>Umberto Prosperini</medico>
+    </cronologiaAccettazioneMedico>
+    <cronologiaAccettazioneMedico>
+      <dataCarico>18/05/2009</dataCarico>
+      <noteCarico>Dimissione paziente annullata</noteCarico>
+      <dataCessione>18/05/2009</dataCessione>
+      <noteCessione>Paziente dimesso</noteCessione>
+      <medico>Umberto Prosperini</medico>
+    </cronologiaAccettazioneMedico>
+  </cronologiaAccettazioneMedico>
+  <iterDiagnostico>
+    <iterDiagnostico>
+      <dataRichiesta/>
+      <richiedente>Umberto Prosperini</richiedente>
+      <esame>VISITA OCULISTICA</esame>
+    </iterDiagnostico>
+  </iterDiagnostico>
+  <somministrazioni/>
+  <esitoDimissione>
+    <dataDimissione>18/05/2009, 11:34</dataDimissione>
+    <esito>Dimissione a domicilio</esito>
+    <reparto/>
+    <mezzo/>
+    <targaMezzo></targaMezzo>
+    <istituto/>
+    <motivo/>
+    <prognosi>3</prognosi>
+    <refertiCompilati></refertiCompilati>
+    <conclusioni/>
+    <terapia>terapia medica prescritta  a parte dallo specialista</terapia>
+    <diagnosi/>
+    <followUp/>
+    <referto>&lt;p>causticazione congiuntivale occhio dx &lt;/p>&#xd;
+  &lt;p>&amp;nbsp;&lt;/p>&#xd;
+  &lt;p>NB l' accettazione e' stata erroneamenet inserita come &amp;quot; infortunio sul lavoro &amp;quot;.&lt;/p></referto>
+  </esitoDimissione>
+</Document>
