@@ -1,0 +1,179 @@
+2023-01-31 16:56:31.945  INFO FGCTL012202 --- [           main] c.p.PortalepsApplication                 : Starting PortalepsApplication using Java 17.0.2 on FGCTL012202 with PID 17536 (C:\Users\francesco.mergiotti\Documents\Personal\Projects\portale-pronto-soccorso-be\target\classes started by francesco.mergiotti in C:\Users\francesco.mergiotti\Documents\Personal\Projects\portale-pronto-soccorso-be)
+2023-01-31 16:56:31.955  INFO FGCTL012202 --- [           main] c.p.PortalepsApplication                 : No active profile set, falling back to default profiles: default
+2023-01-31 16:56:32.673  INFO FGCTL012202 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-31 16:56:32.756  INFO FGCTL012202 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 3 JPA repository interfaces.
+2023-01-31 16:56:33.120  INFO FGCTL012202 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@78b612c6' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-31 16:56:33.128  INFO FGCTL012202 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-01-31 16:56:33.495  INFO FGCTL012202 --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2023-01-31 16:56:33.503  INFO FGCTL012202 --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-31 16:56:33.504  INFO FGCTL012202 --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2023-01-31 16:56:33.504  INFO FGCTL012202 --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2023-01-31 16:56:33.593  INFO FGCTL012202 --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2023-01-31 16:56:33.594  INFO FGCTL012202 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1591 ms
+2023-01-31 16:56:33.741  INFO FGCTL012202 --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-31 16:56:33.788  INFO FGCTL012202 --- [           main] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.32.Final
+2023-01-31 16:56:33.923  INFO FGCTL012202 --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-31 16:56:34.021  INFO FGCTL012202 --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2023-01-31 16:56:34.026  WARN FGCTL012202 --- [           main] c.z.h.u.DriverDataSource                 : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2023-01-31 16:56:34.283  INFO FGCTL012202 --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2023-01-31 16:56:34.311  INFO FGCTL012202 --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-01-31 16:56:34.895  INFO FGCTL012202 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-31 16:56:34.901  INFO FGCTL012202 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-31 16:56:35.414  WARN FGCTL012202 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-31 16:56:35.447  INFO FGCTL012202 --- [           main] c.p.s.WebSecurityConfig                  : authenticationManagerBean() - start
+2023-01-31 16:56:35.447  INFO FGCTL012202 --- [           main] c.p.s.WebSecurityConfig                  : authenticationManagerBean() - end
+2023-01-31 16:56:35.591  INFO FGCTL012202 --- [           main] c.p.s.WebSecurityConfig                  : configure(http) - start
+2023-01-31 16:56:35.595  INFO FGCTL012202 --- [           main] c.p.s.JwtTokenFilterConfigurer           : JwtTokenFilterConfigurer() - start
+2023-01-31 16:56:35.595  INFO FGCTL012202 --- [           main] c.p.s.JwtTokenFilterConfigurer           : JwtTokenFilterConfigurer() - end
+2023-01-31 16:56:35.595  INFO FGCTL012202 --- [           main] c.p.s.WebSecurityConfig                  : configure(http) - end
+2023-01-31 16:56:35.596  INFO FGCTL012202 --- [           main] c.p.s.WebSecurityConfig                  : configure(web) - start
+2023-01-31 16:56:35.596  INFO FGCTL012202 --- [           main] c.p.s.WebSecurityConfig                  : configure(http) - end
+2023-01-31 16:56:35.597  INFO FGCTL012202 --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/v2/api-docs'] with []
+2023-01-31 16:56:35.597  INFO FGCTL012202 --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/swagger-resources/**'] with []
+2023-01-31 16:56:35.597  INFO FGCTL012202 --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/swagger-ui.html'] with []
+2023-01-31 16:56:35.597  INFO FGCTL012202 --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/configuration/**'] with []
+2023-01-31 16:56:35.598  INFO FGCTL012202 --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/webjars/**'] with []
+2023-01-31 16:56:35.598  INFO FGCTL012202 --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/auth/login'] with []
+2023-01-31 16:56:35.598  INFO FGCTL012202 --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure Ant [pattern='/h2-console/**/**'] with []
+2023-01-31 16:56:35.716  INFO FGCTL012202 --- [           main] c.p.s.WebSecurityConfig                  : addCorsMappings() - start
+2023-01-31 16:56:35.717  INFO FGCTL012202 --- [           main] c.p.s.WebSecurityConfig                  : addCorsMappings() - end
+2023-01-31 16:56:35.845  INFO FGCTL012202 --- [           main] c.p.s.JwtTokenFilterConfigurer           : configure() - start
+2023-01-31 16:56:35.845  INFO FGCTL012202 --- [           main] c.p.s.JwtTokenFilterConfigurer           : configure() - end
+2023-01-31 16:56:35.846  INFO FGCTL012202 --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@619b7436, org.springframework.security.web.context.SecurityContextPersistenceFilter@568fd3de, org.springframework.security.web.header.HeaderWriterFilter@3df681cc, org.springframework.web.filter.CorsFilter@6af0407c, org.springframework.security.web.authentication.logout.LogoutFilter@4c5c0306, com.portaleps.security.JwtTokenFilter@71c1ca1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3cc5408c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@33478a2f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@20cf3ab3, org.springframework.security.web.session.SessionManagementFilter@71c91121, org.springframework.security.web.access.ExceptionTranslationFilter@4220468, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7343d843]
+2023-01-31 16:56:36.047  INFO FGCTL012202 --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2023-01-31 16:56:36.069  INFO FGCTL012202 --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-31 16:56:36.076  INFO FGCTL012202 --- [           main] c.p.PortalepsApplication                 : Started PortalepsApplication in 4.58 seconds (JVM running for 5.322)
+2023-01-31 16:56:36.241  INFO FGCTL012202 --- [           main] c.p.PortalepsApplication                 : initFolders() - start
+2023-01-31 16:56:36.242  INFO FGCTL012202 --- [           main] c.p.PortalepsApplication                 : initFolders() - folders created
+2023-01-31 16:56:36.242  INFO FGCTL012202 --- [           main] c.p.PortalepsApplication                 : initFolders() - end
+2023-01-31 16:57:32.073  INFO FGCTL012202 --- [nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-31 16:57:32.073  INFO FGCTL012202 --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2023-01-31 16:57:32.074  INFO FGCTL012202 --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 0 ms
+2023-01-31 16:57:32.114  INFO FGCTL012202 --- [nio-8080-exec-1] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2023-01-31 16:57:32.169  INFO FGCTL012202 --- [nio-8080-exec-1] c.p.h.UserHelper                         : loadUserByToken() - start
+2023-01-31 16:57:32.170  INFO FGCTL012202 --- [nio-8080-exec-1] c.p.h.UserHelper                         : loadUserByToken() - end
+2023-01-31 16:57:32.194  INFO FGCTL012202 --- [nio-8080-exec-1] c.p.c.ArchiveController                  : getMyArchives() - start
+2023-01-31 16:57:32.194  INFO FGCTL012202 --- [nio-8080-exec-1] c.p.h.UserHelper                         : getCurrentUser() - start
+2023-01-31 16:57:32.194  INFO FGCTL012202 --- [nio-8080-exec-1] c.p.h.UserHelper                         : getCurrentUser() - end
+2023-01-31 16:57:32.199  INFO FGCTL012202 --- [nio-8080-exec-1] c.p.c.ArchiveController                  : Richieta da utente [admin]
+2023-01-31 16:57:32.207  INFO FGCTL012202 --- [nio-8080-exec-1] c.p.s.ArchiveService                     : getArchivesByUser() - start
+2023-01-31 16:57:32.207  INFO FGCTL012202 --- [nio-8080-exec-1] c.p.h.UserHelper                         : getCurrentUser() - start
+2023-01-31 16:57:32.207  INFO FGCTL012202 --- [nio-8080-exec-1] c.p.h.UserHelper                         : getCurrentUser() - end
+2023-01-31 16:57:32.260  INFO FGCTL012202 --- [nio-8080-exec-1] c.p.s.ArchiveService                     : getArchivesByUser() - end
+2023-01-31 16:57:32.261  INFO FGCTL012202 --- [nio-8080-exec-1] c.p.c.ArchiveController                  : getMyArchives() - end
+2023-01-31 16:57:32.311  INFO FGCTL012202 --- [nio-8080-exec-1] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2023-01-31 16:57:33.785  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2023-01-31 16:57:33.786  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.UserHelper                         : loadUserByToken() - start
+2023-01-31 16:57:33.788  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.UserHelper                         : loadUserByToken() - end
+2023-01-31 16:57:33.821  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.c.VerbaleController                  : getAll() - start
+2023-01-31 16:57:33.821  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.UserHelper                         : getCurrentUser() - start
+2023-01-31 16:57:33.821  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.UserHelper                         : getCurrentUser() - end
+2023-01-31 16:57:33.828  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.c.VerbaleController                  : Richieta da utente [admin] per archivio: [1] con parametri: [{"filters":{},"pagination":[25,0]}]
+2023-01-31 16:57:33.842  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.s.UserService                        : preliminaryChecks() - start
+2023-01-31 16:57:33.842  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.UserHelper                         : getCurrentUser() - start
+2023-01-31 16:57:33.843  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.UserHelper                         : getCurrentUser() - end
+2023-01-31 16:57:33.860  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.s.UserService                        : userHasAccessToArchive() - start
+2023-01-31 16:57:33.860  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.s.UserService                        : userHasAccessToArchive() - end
+2023-01-31 16:57:33.868  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.s.UserService                        : preliminaryChecks() - end
+2023-01-31 16:57:33.872  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.s.VerbaleService                     : getVerbaliLength() - start
+2023-01-31 16:57:33.874  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.QueryBuilder                       : buildCountRows() - start
+2023-01-31 16:57:33.874  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.QueryBuilder                       : appendWhereCondition() - start
+2023-01-31 16:57:33.874  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.QueryBuilder                       : appendWhereCondition() - end
+2023-01-31 16:57:33.874  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.QueryBuilder                       : buildCountRows() - end
+2023-01-31 16:57:33.874  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.DatabaseHelper                     : performQuery() - start
+2023-01-31 16:57:33.874  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.DatabaseHelper                     : createConnection() - start
+2023-01-31 16:57:33.876  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.DatabaseHelper                     : mapDriverClassName() - start
+2023-01-31 16:57:33.876  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.DatabaseHelper                     : mapDriverClassName() - class name found
+2023-01-31 16:57:33.876  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.DatabaseHelper                     : mapDriverClassName() - end
+2023-01-31 16:57:33.900  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.DatabaseHelper                     : createConnection() - connection created
+2023-01-31 16:57:33.941  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.DatabaseHelper                     : performQuery() - connection closed
+2023-01-31 16:57:33.941  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.DatabaseHelper                     : performQuery() - end
+2023-01-31 16:57:33.941  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.s.VerbaleService                     : getVerbaliLength() - end
+2023-01-31 16:57:33.941  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.s.VerbaleService                     : populatePagination() - start
+2023-01-31 16:57:33.941  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.s.VerbaleService                     : populatePagination() - end
+2023-01-31 16:57:33.942  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.s.VerbaleService                     : getVerbali() - start
+2023-01-31 16:57:33.942  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.QueryBuilder                       : buildSearchQuery() - start
+2023-01-31 16:57:33.942  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.QueryBuilder                       : appendWhereCondition() - start
+2023-01-31 16:57:33.942  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.QueryBuilder                       : appendWhereCondition() - end
+2023-01-31 16:57:33.942  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.QueryBuilder                       : appendPagination() - start
+2023-01-31 16:57:33.942  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.QueryBuilder                       : appendPagination() - end
+2023-01-31 16:57:33.942  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.QueryBuilder                       : buildSearchQuery() - end
+2023-01-31 16:57:33.943  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.DatabaseHelper                     : performQuery() - start
+2023-01-31 16:57:33.943  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.DatabaseHelper                     : createConnection() - start
+2023-01-31 16:57:33.943  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.DatabaseHelper                     : mapDriverClassName() - start
+2023-01-31 16:57:33.943  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.DatabaseHelper                     : mapDriverClassName() - class name found
+2023-01-31 16:57:33.943  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.DatabaseHelper                     : mapDriverClassName() - end
+2023-01-31 16:57:33.969  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.DatabaseHelper                     : createConnection() - connection created
+2023-01-31 16:57:33.970  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.s.VerbaleService                     : extractVerbaliList() - start
+2023-01-31 16:57:33.970  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.s.VerbaleService                     : extractVerbaliList() - end
+2023-01-31 16:57:34.013  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.DatabaseHelper                     : performQuery() - connection closed
+2023-01-31 16:57:34.013  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.h.DatabaseHelper                     : performQuery() - end
+2023-01-31 16:57:34.013  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.s.VerbaleService                     : getVerbali() - end
+2023-01-31 16:57:34.013  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.c.VerbaleController                  : getAll() - action performed
+2023-01-31 16:57:34.013  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.c.VerbaleController                  : getAll() - end
+2023-01-31 16:57:34.024  INFO FGCTL012202 --- [nio-8080-exec-2] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2023-01-31 16:57:50.293  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.s.JwtTokenFilter                     : doFilterInternal() - start
+2023-01-31 16:57:50.294  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.UserHelper                         : loadUserByToken() - start
+2023-01-31 16:57:50.295  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.UserHelper                         : loadUserByToken() - end
+2023-01-31 16:57:50.297  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.c.VerbaleController                  : getAll() - start
+2023-01-31 16:57:50.297  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.UserHelper                         : getCurrentUser() - start
+2023-01-31 16:57:50.298  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.UserHelper                         : getCurrentUser() - end
+2023-01-31 16:57:50.303  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.c.VerbaleController                  : Richieta da utente [admin] per archivio: [1] con parametri: [{"filters":{"nome":"Mario"},"pagination":[25,0]}]
+2023-01-31 16:57:50.303  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.s.UserService                        : preliminaryChecks() - start
+2023-01-31 16:57:50.303  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.UserHelper                         : getCurrentUser() - start
+2023-01-31 16:57:50.303  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.UserHelper                         : getCurrentUser() - end
+2023-01-31 16:57:50.307  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.s.UserService                        : userHasAccessToArchive() - start
+2023-01-31 16:57:50.308  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.s.UserService                        : userHasAccessToArchive() - end
+2023-01-31 16:57:50.309  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.s.UserService                        : preliminaryChecks() - end
+2023-01-31 16:57:50.311  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.s.VerbaleService                     : getVerbaliLength() - start
+2023-01-31 16:57:50.311  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.QueryBuilder                       : buildCountRows() - start
+2023-01-31 16:57:50.311  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.QueryBuilder                       : appendWhereCondition() - start
+2023-01-31 16:57:50.312  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.QueryBuilder                       : appendWhereCondition() - end
+2023-01-31 16:57:50.312  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.QueryBuilder                       : buildCountRows() - end
+2023-01-31 16:57:50.312  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.DatabaseHelper                     : performQuery() - start
+2023-01-31 16:57:50.312  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.DatabaseHelper                     : createConnection() - start
+2023-01-31 16:57:50.314  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.DatabaseHelper                     : mapDriverClassName() - start
+2023-01-31 16:57:50.314  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.DatabaseHelper                     : mapDriverClassName() - class name found
+2023-01-31 16:57:50.314  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.DatabaseHelper                     : mapDriverClassName() - end
+2023-01-31 16:57:50.328  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.DatabaseHelper                     : createConnection() - connection created
+2023-01-31 16:57:50.328  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.QueryBuilder                       : applyFilters() - start
+2023-01-31 16:57:50.328  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.QueryBuilder                       : extractValueParams() - start
+2023-01-31 16:57:50.328  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.QueryBuilder                       : getValue() - start
+2023-01-31 16:57:50.329  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.QueryBuilder                       : getValue() - end
+2023-01-31 16:57:50.329  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.QueryBuilder                       : extractValueParams() - end
+2023-01-31 16:57:50.329  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.QueryBuilder                       : applyFilters() - end
+2023-01-31 16:57:50.330  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.DatabaseHelper                     : performQuery() - connection closed
+2023-01-31 16:57:50.330  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.DatabaseHelper                     : performQuery() - end
+2023-01-31 16:57:50.330  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.s.VerbaleService                     : getVerbaliLength() - end
+2023-01-31 16:57:50.330  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.s.VerbaleService                     : populatePagination() - start
+2023-01-31 16:57:50.330  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.s.VerbaleService                     : populatePagination() - end
+2023-01-31 16:57:50.330  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.s.VerbaleService                     : getVerbali() - start
+2023-01-31 16:57:50.330  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.QueryBuilder                       : buildSearchQuery() - start
+2023-01-31 16:57:50.330  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.QueryBuilder                       : appendWhereCondition() - start
+2023-01-31 16:57:50.330  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.QueryBuilder                       : appendWhereCondition() - end
+2023-01-31 16:57:50.330  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.QueryBuilder                       : appendPagination() - start
+2023-01-31 16:57:50.330  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.QueryBuilder                       : appendPagination() - end
+2023-01-31 16:57:50.330  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.QueryBuilder                       : buildSearchQuery() - end
+2023-01-31 16:57:50.330  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.DatabaseHelper                     : performQuery() - start
+2023-01-31 16:57:50.330  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.DatabaseHelper                     : createConnection() - start
+2023-01-31 16:57:50.330  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.DatabaseHelper                     : mapDriverClassName() - start
+2023-01-31 16:57:50.330  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.DatabaseHelper                     : mapDriverClassName() - class name found
+2023-01-31 16:57:50.330  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.DatabaseHelper                     : mapDriverClassName() - end
+2023-01-31 16:57:50.375  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.DatabaseHelper                     : createConnection() - connection created
+2023-01-31 16:57:50.375  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.QueryBuilder                       : applyFilters() - start
+2023-01-31 16:57:50.375  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.QueryBuilder                       : extractValueParams() - start
+2023-01-31 16:57:50.375  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.QueryBuilder                       : getValue() - start
+2023-01-31 16:57:50.375  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.QueryBuilder                       : getValue() - end
+2023-01-31 16:57:50.375  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.QueryBuilder                       : extractValueParams() - end
+2023-01-31 16:57:50.375  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.QueryBuilder                       : applyFilters() - end
+2023-01-31 16:57:50.376  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.s.VerbaleService                     : extractVerbaliList() - start
+2023-01-31 16:57:50.376  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.s.VerbaleService                     : extractVerbaliList() - end
+2023-01-31 16:57:50.409  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.DatabaseHelper                     : performQuery() - connection closed
+2023-01-31 16:57:50.409  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.h.DatabaseHelper                     : performQuery() - end
+2023-01-31 16:57:50.409  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.s.VerbaleService                     : getVerbali() - end
+2023-01-31 16:57:50.409  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.c.VerbaleController                  : getAll() - action performed
+2023-01-31 16:57:50.409  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.c.VerbaleController                  : getAll() - end
+2023-01-31 16:57:50.410  INFO FGCTL012202 --- [nio-8080-exec-3] c.p.s.JwtTokenFilter                     : doFilterInternal() - end
+2023-01-31 16:59:09.865  INFO FGCTL012202 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-31 16:59:09.868  INFO FGCTL012202 --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2023-01-31 16:59:10.163  INFO FGCTL012202 --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.

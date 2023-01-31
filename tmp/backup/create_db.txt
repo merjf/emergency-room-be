@@ -1,0 +1,815 @@
+CREATE DATABASE emergency_room_db_1;
+USE emergency_room_db_1;
+-- emergencyroom.esami definition
+
+CREATE TABLE `esami` (
+  `id_esame` smallint unsigned NOT NULL AUTO_INCREMENT,
+  `codice` varchar(10) NOT NULL DEFAULT '',
+  `cod_min` varchar(10) NOT NULL,
+  `cod_min_old` varchar(10) DEFAULT NULL,
+  `descrizione` varchar(255) NOT NULL DEFAULT '',
+  `descrizione_breve` varchar(50) DEFAULT NULL COMMENT 'Descrizione breve dell esame',
+  `attivo` tinyint unsigned NOT NULL DEFAULT '1',
+  `durata` tinyint unsigned NOT NULL DEFAULT '0',
+  `prescrivibile` tinyint unsigned NOT NULL DEFAULT '0',
+  `prezzo_privato` decimal(10,2) NOT NULL DEFAULT '0.00',
+  `prezzo_ticket_old` decimal(10,2) DEFAULT '0.00',
+  `prezzo_ticket` decimal(10,2) NOT NULL DEFAULT '0.00',
+  `prezzo_cagliari` decimal(10,2) unsigned DEFAULT '0.00',
+  `id_tipo_prelievo` tinyint unsigned DEFAULT NULL COMMENT 'Id del prelievo associato',
+  `id_mat_biologico` smallint DEFAULT NULL COMMENT 'Id del materiale biologico',
+  `qta_mat_biologico` smallint DEFAULT NULL COMMENT 'Quantita del materiale biologico',
+  `id_tipo_metodo` tinyint unsigned DEFAULT NULL COMMENT 'Tipologia metodo prelievo',
+  `num_prestazioni` tinyint unsigned NOT NULL DEFAULT '1',
+  `num_prelievo` tinyint unsigned DEFAULT '1' COMMENT 'Numero dei prelievi previsti per quell esame',
+  `peso` decimal(10,2) unsigned NOT NULL DEFAULT '0.00',
+  `macro_classe` tinyint unsigned NOT NULL DEFAULT '0',
+  `classe` char(1) NOT NULL DEFAULT '0',
+  `laterale` char(1) NOT NULL DEFAULT 'N',
+  `dose` decimal(10,2) unsigned NOT NULL DEFAULT '0.00',
+  `branca` tinyint unsigned NOT NULL DEFAULT '0',
+  `cod_body` tinyint unsigned NOT NULL DEFAULT '0',
+  `cod_modality` tinyint unsigned NOT NULL DEFAULT '0',
+  `contabile` tinyint unsigned NOT NULL DEFAULT '0',
+  `eseguibile` tinyint unsigned DEFAULT '1',
+  `refertabile` tinyint unsigned DEFAULT '1',
+  `scontabile` tinyint unsigned DEFAULT '1',
+  `procedura` tinyint DEFAULT '0' COMMENT 'Procedura assegnabile in fase di dimissione paziente sdo',
+  `accessorio` tinyint DEFAULT '0' COMMENT 'Flag esame di tipo accessorio ( quindi associabile ai ricoveri per la fatturazione finale )',
+  `sconto_bindi` decimal(10,2) unsigned DEFAULT '0.00',
+  `posizione` smallint(3) unsigned zerofill DEFAULT '000' COMMENT 'Posizione in fase di ricerca',
+  `note_esame` varchar(255) DEFAULT NULL COMMENT 'Note associate alllo esame',
+  `interruzione` tinyint DEFAULT '0' COMMENT 'Interruzione di pagina',
+  `duplica` tinyint unsigned DEFAULT '1' COMMENT 'Flag che permette l''inserimento multiplo in un''accettazione per refertare più volte lo stesso esame',
+  `iva` decimal(10,2) unsigned DEFAULT '0.00' COMMENT 'Iva dell esame che viene conteggiata nella fatturazione',
+  `avviso_acc_flg` tinyint unsigned DEFAULT '0',
+  `avviso_acc_txt` text,
+  `pren_online` tinyint unsigned DEFAULT '0' COMMENT 'flag che indica se un dato esame e prenotabile da web',
+  `lab_ref_personalizzato` tinyint DEFAULT '0' COMMENT 'Laboratorio analisi referto personalizzato attivo si/no',
+  `terapia_acc_flg` tinyint unsigned DEFAULT '0',
+  `prog_reg_prev` tinyint unsigned DEFAULT '0',
+  `cc_stampa_default` tinyint unsigned DEFAULT '1' COMMENT 'Flag stampa esame di default in cartella',
+  `frequenza` int unsigned DEFAULT '0' COMMENT 'Frequenza uso esame in fase dimissione paziente',
+  `val_ini` tinyint unsigned DEFAULT '0' COMMENT 'Esame che richiede la valutazione iniziale completa ',
+  `protocollo` tinyint unsigned DEFAULT '0' COMMENT 'Esame protocollo Fisio 0-> No 1-> Si',
+  `limite_protocollo` int unsigned DEFAULT '0' COMMENT 'Limite protocolli prescrivibili',
+  `visita` tinyint unsigned DEFAULT '0',
+  `prosp_visita` tinyint unsigned DEFAULT '0',
+  `prosp_ecg` tinyint unsigned DEFAULT '0',
+  `flg_service` tinyint unsigned DEFAULT '0',
+  `gg_consegna` tinyint unsigned DEFAULT '1' COMMENT 'Giorni consegna',
+  `erogato_stato_richiesto` tinyint unsigned DEFAULT '0',
+  PRIMARY KEY (`id_esame`),
+  KEY `codice` (`codice`),
+  KEY `cod_body` (`cod_body`),
+  KEY `cod_min` (`cod_min_old`),
+  KEY `cod_modality` (`cod_modality`),
+  KEY `macro_classe` (`macro_classe`),
+  KEY `id_tipo_metodo` (`id_tipo_metodo`),
+  KEY `id_tipo_prelievo` (`id_tipo_prelievo`),
+  KEY `lab_ref_personalizzato` (`lab_ref_personalizzato`),
+  KEY `accessorio` (`accessorio`),
+  KEY `contabile` (`contabile`),
+  KEY `erogato_stato_richiesto` (`erogato_stato_richiesto`),
+  KEY `eseguibile` (`eseguibile`),
+  KEY `flg_service` (`flg_service`),
+  KEY `procedura` (`procedura`),
+  KEY `refertabile` (`refertabile`),
+  KEY `scontabile` (`scontabile`)
+) ENGINE=MyISAM AUTO_INCREMENT=13248 DEFAULT CHARSET=latin1;
+
+
+-- emergencyroom.mag_articoli definition
+
+CREATE TABLE `mag_articoli` (
+  `id_articolo` int unsigned NOT NULL AUTO_INCREMENT,
+  `codice` varchar(20) NOT NULL DEFAULT '',
+  `descrizione` varchar(200) NOT NULL DEFAULT '',
+  `qta_confezione` tinyint unsigned NOT NULL DEFAULT '0',
+  `scorta_minima` mediumint unsigned DEFAULT '0',
+  `qta_riordino` mediumint unsigned DEFAULT '0',
+  `giacenza` int DEFAULT '0',
+  `prezzo` decimal(15,5) DEFAULT '0.00000',
+  `iva` decimal(10,2) DEFAULT '20.00',
+  `id_produttore` int unsigned DEFAULT '0',
+  `id_tipo` tinyint unsigned DEFAULT '0',
+  `id_modalita_somministrazione` tinyint unsigned DEFAULT '0',
+  `chemioterapico` char(1) DEFAULT 'N',
+  `mdc` char(1) DEFAULT 'N',
+  `id_gruppo` tinyint unsigned DEFAULT '0',
+  `id_sottogruppo` tinyint unsigned DEFAULT '0',
+  `peso` smallint DEFAULT NULL,
+  `unita_misura` tinyint DEFAULT '0',
+  `id_conto` int unsigned DEFAULT '0',
+  `atc` varchar(10) DEFAULT NULL,
+  `principio_attivo` varchar(100) DEFAULT NULL,
+  `forma_farmaceutica` varchar(50) DEFAULT NULL,
+  `dosaggio` varchar(50) DEFAULT NULL,
+  `esterno` tinyint(1) DEFAULT '0' COMMENT 'Flag farmaco esterno al magazzino',
+  PRIMARY KEY (`id_articolo`),
+  KEY `codice` (`codice`),
+  KEY `id_produttore` (`id_produttore`),
+  KEY `tipo` (`id_tipo`),
+  KEY `chemioterapico` (`chemioterapico`),
+  KEY `id_gruppo` (`id_gruppo`),
+  KEY `id_sottogruppo` (`id_sottogruppo`),
+  KEY `id_conto` (`id_conto`)
+) ENGINE=MyISAM AUTO_INCREMENT=650 DEFAULT CHARSET=latin1;
+
+
+-- emergencyroom.ps_accessi definition
+
+CREATE TABLE `ps_accessi` (
+  `id_accesso` bigint unsigned NOT NULL COMMENT 'Identificativo accesso',
+  `id_paz` mediumint unsigned DEFAULT NULL COMMENT 'Identificativo paziente',
+  `id_triage_ingresso` tinyint unsigned DEFAULT NULL COMMENT 'Triage assegnato in fase di ingresso',
+  `id_triage_attuale` tinyint unsigned DEFAULT NULL COMMENT 'Triage assegnato dalle rivalutazioni',
+  `id_causa` tinyint unsigned DEFAULT NULL COMMENT 'Id causa',
+  `id_erogante` tinyint unsigned DEFAULT NULL COMMENT 'Id erogante',
+  `id_esenzione` tinyint unsigned DEFAULT NULL COMMENT 'Id eventuale esenzione',
+  `id_patologia` int unsigned DEFAULT NULL COMMENT 'Id della patologia associata',
+  `id_mezzo` tinyint unsigned DEFAULT NULL COMMENT 'Id mezzo di arrivo',
+  `id_problema` tinyint unsigned DEFAULT NULL COMMENT 'Identificativo generico problema',
+  `id_problema_dett` tinyint DEFAULT NULL COMMENT 'Identificativo problema dettaglio',
+  `id_istituto_prov` smallint unsigned DEFAULT NULL COMMENT 'Identificativo istituto provenienza',
+  `targa_mezzo` varchar(10) DEFAULT NULL COMMENT 'Targa autoveicolo mezzo arrivo',
+  `data_acc` date DEFAULT NULL COMMENT 'Data registrazione accesso',
+  `ora_acc` time DEFAULT NULL COMMENT 'Ora registrazione accesso',
+  `ultima_valutazione` datetime DEFAULT NULL COMMENT 'Dataora della ultima valutazione eseguita',
+  `118_centrale` varchar(5) DEFAULT NULL COMMENT 'Centrale operativa del 118 che ha trasportato lo assistito',
+  `118_missione` varchar(16) DEFAULT NULL COMMENT 'Codice della missione del 118 che ha trasportato il paziente al pronto soccorso',
+  `inc_resp` tinyint unsigned DEFAULT '0' COMMENT 'Responsabilita altru si no',
+  `inc_luogo` varchar(255) DEFAULT NULL COMMENT 'Luogo incidente',
+  `inc_circ` varchar(255) DEFAULT NULL COMMENT 'Circostanze incidente',
+  `inc_data` datetime DEFAULT NULL COMMENT 'Data ora incidente',
+  `note` text COMMENT 'Note aggiuntive associate allo accesso',
+  `medico_acc` varchar(20) DEFAULT NULL COMMENT 'Medico accettatore',
+  `annullato` tinyint(1) DEFAULT '0' COMMENT 'Flag accesso annullato',
+  `stato` char(2) DEFAULT NULL COMMENT 'Stato accesso: 1 = registrato, 3 = Accettato, 2 = Ceduto, 4 = Dimesso',
+  `obi` tinyint unsigned DEFAULT '0' COMMENT 'Flag paziente Obi 1 si 0 no',
+  `obi_dimesso` tinyint unsigned DEFAULT '0' COMMENT 'Flag dimissione Obi 1 si 0 no',
+  `accettato` tinyint unsigned DEFAULT '0' COMMENT 'Flag paziente accettato per visita',
+  `ppi_consigliato` tinyint unsigned DEFAULT '0' COMMENT 'Flag accesso ppi consigliato ai medici',
+  `ppi_accettato` tinyint unsigned DEFAULT '0' COMMENT 'Flag accesso ppi accettato',
+  `dimesso` tinyint unsigned DEFAULT '0' COMMENT 'Flag paziente dimesso',
+  `consegnato` tinyint unsigned DEFAULT '0' COMMENT 'Flag modulo dimissioni consegnato',
+  `riaperto` tinyint unsigned DEFAULT '0' COMMENT 'Flag dimissione inserita ed annullata ( per evitare di modificare il referto in caso di riapertuta )',
+  `emur_escludi` tinyint unsigned DEFAULT '0' COMMENT 'Flag per escludere acceso dal flusso emur',
+  `emur_escludi_uid` varchar(20) DEFAULT NULL COMMENT 'Utente che ha escluso accesso da emur',
+  `emur_escludi_data` datetime DEFAULT NULL COMMENT 'Data di esclusione accesso da emur',
+  `ins_uid` varchar(20) DEFAULT NULL COMMENT 'Utente inseritore',
+  `ins_data` datetime DEFAULT NULL COMMENT 'Data ora inserimento accesso',
+  `ins_ip` varchar(16) DEFAULT NULL COMMENT 'Indirizzo ip client inseritore',
+  PRIMARY KEY (`id_accesso`),
+  KEY `id_paz` (`id_paz`),
+  KEY `id_causa` (`id_causa`),
+  KEY `id_erogante` (`id_erogante`),
+  KEY `id_mezzo` (`id_mezzo`),
+  KEY `id_problema` (`id_problema`),
+  KEY `id_problema_dett` (`id_problema_dett`),
+  KEY `id_triage_attuale` (`id_triage_attuale`),
+  KEY `id_istituto_prov` (`id_istituto_prov`),
+  KEY `id_triage_ingresso` (`id_triage_ingresso`),
+  KEY `id_esenzione` (`id_esenzione`),
+  KEY `dimesso` (`dimesso`),
+  KEY `id_patologia` (`id_patologia`),
+  KEY `medico_acc` (`medico_acc`),
+  KEY `annullato` (`annullato`),
+  KEY `ins_uid` (`ins_ip`),
+  KEY `ppi_accettato` (`ppi_accettato`),
+  KEY `ppi_consigliato` (`ppi_consigliato`),
+  KEY `escludi_emur` (`emur_escludi`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+
+-- emergencyroom.ps_accessi_ana definition
+
+CREATE TABLE `ps_accessi_ana` (
+  `id_accesso` bigint unsigned NOT NULL DEFAULT '0' COMMENT 'Id ricovero anagrafica',
+  `cognome` varchar(30) DEFAULT NULL COMMENT 'Cognome paziente',
+  `nome` varchar(30) DEFAULT NULL COMMENT 'Nome paziente',
+  `data_nascita` date DEFAULT NULL COMMENT 'Data nascita paziente',
+  `data_morte` datetime DEFAULT NULL COMMENT 'Data ora eventuale morte',
+  `sesso` char(1) DEFAULT NULL COMMENT 'Sesso paziente',
+  `cod_fisc` varchar(16) DEFAULT NULL COMMENT 'Codice fiscale paziente',
+  `cod_team` varchar(28) DEFAULT NULL COMMENT 'Codice team del paziente',
+  `indirizzo` varchar(150) DEFAULT NULL COMMENT 'Indirizzo residenza',
+  `stato_civile` smallint DEFAULT NULL COMMENT 'Stato civile al ricovero',
+  `cod_comune_nas` varchar(6) NOT NULL DEFAULT '000000',
+  `cod_comune_res` varchar(6) NOT NULL DEFAULT '000000',
+  `id_cittadinanza` smallint unsigned DEFAULT NULL COMMENT 'Cittadinanza attuale',
+  `asl` smallint unsigned DEFAULT NULL COMMENT 'Asl residenza attuale',
+  `professione` tinyint unsigned DEFAULT NULL COMMENT 'Professione attuale',
+  `nas_comune` varchar(50) DEFAULT NULL,
+  `nas_provincia` varchar(2) DEFAULT NULL,
+  `nas_cod_istat` varchar(6) DEFAULT NULL,
+  `res_comune` varchar(50) DEFAULT NULL,
+  `res_provincia` varchar(2) DEFAULT NULL,
+  `res_cod_istat` varchar(6) DEFAULT NULL,
+  `res_id_regione` tinyint unsigned DEFAULT NULL,
+  PRIMARY KEY (`id_accesso`),
+  KEY `stato_civile` (`stato_civile`),
+  KEY `asl` (`asl`),
+  KEY `id_cittadinanza` (`id_cittadinanza`),
+  KEY `cod_comune_nas` (`cod_comune_nas`),
+  KEY `cod_comune_res` (`cod_comune_res`),
+  KEY `ps_accessi_ana_id_accesso_IDX` (`id_accesso`) USING BTREE
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+
+-- emergencyroom.ps_accessi_dett definition
+
+CREATE TABLE `ps_accessi_dett` (
+  `id_dettaglio` int unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id dettaglio accesso',
+  `id_accesso` bigint DEFAULT NULL COMMENT 'Id accesso associato al dettaglio',
+  `car_uid` varchar(20) DEFAULT NULL COMMENT 'User preso in carico',
+  `car_data` datetime DEFAULT NULL COMMENT 'Data presa in carico',
+  `car_ip` varchar(16) DEFAULT NULL COMMENT 'Ip di presa in carico',
+  `car_note` varchar(255) DEFAULT NULL COMMENT 'Note della presa in carico paziente',
+  `cess_data` datetime DEFAULT NULL COMMENT 'Data ora cessione',
+  `cess_note` varchar(255) DEFAULT NULL COMMENT 'Note cessione paziente',
+  `cess_ip` varchar(16) DEFAULT NULL COMMENT 'Id di cessione',
+  PRIMARY KEY (`id_dettaglio`),
+  KEY `id_accesso` (`id_accesso`),
+  KEY `car_uid` (`car_uid`)
+) ENGINE=MyISAM AUTO_INCREMENT=251981 DEFAULT CHARSET=latin1;
+
+
+-- emergencyroom.ps_accessi_diagn definition
+
+CREATE TABLE `ps_accessi_diagn` (
+  `id_accesso_diagn` int unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id diagnosi',
+  `id_accesso` bigint unsigned DEFAULT NULL COMMENT 'Id accesso associato alla diagnosi',
+  `id_diagnosi` smallint unsigned DEFAULT NULL COMMENT 'Id della diagnosi associata',
+  `tipo` tinyint unsigned DEFAULT NULL COMMENT 'Tipo della diagosi principale ...',
+  `ins_data` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Data di inserimento diagnosi',
+  `ins_ip` varchar(16) DEFAULT NULL COMMENT 'Ip di inserimento diagnosi',
+  `ins_uid` varchar(20) DEFAULT NULL COMMENT 'User di inserimento',
+  PRIMARY KEY (`id_accesso_diagn`),
+  KEY `tipo` (`tipo`),
+  KEY `id_diagnosi` (`id_diagnosi`),
+  KEY `ps_accessi_diagn_id_accesso_IDX` (`id_accesso`) USING BTREE
+) ENGINE=MyISAM AUTO_INCREMENT=127969 DEFAULT CHARSET=latin1;
+
+
+-- emergencyroom.ps_accessi_dim definition
+
+CREATE TABLE `ps_accessi_dim` (
+  `id_accesso` bigint unsigned NOT NULL COMMENT 'Id accesso associato',
+  `id_esito` tinyint unsigned DEFAULT NULL COMMENT 'Id dimissione paziente',
+  `id_rich_ricovero` int unsigned DEFAULT NULL COMMENT 'Id della richiesta di ricovero',
+  `id_mezzo_dim` tinyint unsigned DEFAULT NULL COMMENT 'Id mezzo di dimissione',
+  `id_istituto_dim` smallint unsigned DEFAULT NULL COMMENT 'Identificativo istituto dimissione',
+  `id_trasferimento` tinyint unsigned DEFAULT NULL COMMENT 'Identificativo del motivo del trasferimento',
+  `id_reparto` tinyint unsigned DEFAULT NULL COMMENT 'Identificativo reparto dimissione',
+  `id_ricovero` int unsigned DEFAULT NULL COMMENT 'Id ricovero associato al pronto soccorso ( caso in cui la modalita dimissione sia un ricovero )',
+  `id_forza_ordine` tinyint unsigned DEFAULT NULL COMMENT 'Identificativo forza ordine',
+  `agente_forza_ordine` varchar(50) DEFAULT NULL COMMENT 'Nominativo agente forza ordine',
+  `data_dim` date DEFAULT NULL COMMENT 'Data dimissione',
+  `ora_dim` time DEFAULT NULL COMMENT 'Ora dimissione',
+  `targa_mezzo` varchar(10) DEFAULT NULL COMMENT 'Targa eventuale mezzo dimissione',
+  `prognosi` smallint unsigned DEFAULT NULL COMMENT 'Giorni di prognosi risoluzione',
+  `terapia` text COMMENT 'Terapia della dimissione',
+  `referto` text COMMENT 'Note della dimissione',
+  `conclusioni` text COMMENT 'Conclusioni della dimissione',
+  `followup` text COMMENT 'Followup di dimissione',
+  `ref_inail` tinyint unsigned DEFAULT '0' COMMENT 'Flag referto inail',
+  `ref_giudiz` tinyint(1) DEFAULT '0' COMMENT 'Flag referto autorita giudiziara',
+  `ref_morso` tinyint(1) DEFAULT '0' COMMENT 'Flag referto per morso di animale',
+  `ref_altro` tinyint(1) DEFAULT '0' COMMENT 'Flag referto compilazione altri tipi',
+  `ins_uid` varchar(20) DEFAULT NULL COMMENT 'Utente inseritore',
+  `ins_data` datetime DEFAULT NULL COMMENT 'Data inserimento',
+  `ins_ip` varchar(16) DEFAULT NULL COMMENT 'Ip di inserimento',
+  PRIMARY KEY (`id_accesso`),
+  KEY `id_esito` (`id_esito`),
+  KEY `id_ricovero` (`id_ricovero`),
+  KEY `id_mezzo_dim` (`id_mezzo_dim`),
+  KEY `id_istituto_dim` (`id_istituto_dim`),
+  KEY `id_reparto` (`id_reparto`),
+  KEY `id_forza_ordine` (`id_forza_ordine`),
+  KEY `id_trasferimento` (`id_trasferimento`),
+  KEY `id_rich_ricovero` (`id_rich_ricovero`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+
+-- emergencyroom.ps_accessi_esa definition
+
+CREATE TABLE `ps_accessi_esa` (
+  `id_accesso_esa` int unsigned NOT NULL AUTO_INCREMENT COMMENT 'progressivo esame ',
+  `id_accesso` bigint unsigned DEFAULT NULL COMMENT 'Id accesso associato',
+  `id_esame` smallint unsigned DEFAULT NULL COMMENT 'Id esame associato',
+  `id_acc_dett` int(10) unsigned zerofill DEFAULT NULL COMMENT 'Id accettazione dettaglio',
+  `id_rich_acc` int(10) unsigned zerofill DEFAULT NULL COMMENT 'Id richiesta accettazione associato',
+  `id_rich_acc_dett` int(10) unsigned zerofill DEFAULT NULL COMMENT 'Id richeista accetazione dettaglio',
+  `data_richiesta` datetime DEFAULT NULL COMMENT 'Data ora generazione richiesta',
+  `note` varchar(255) DEFAULT NULL COMMENT 'Note associate allo esame',
+  `tipo` tinyint unsigned DEFAULT '1' COMMENT 'Ordine importanza prestazione',
+  `annullato` tinyint(1) DEFAULT '0' COMMENT 'Flag esame annullato',
+  `rifiutato` tinyint unsigned DEFAULT '0' COMMENT 'Flag esame rifiutato dal paziente',
+  `ins_uid` varchar(20) DEFAULT NULL COMMENT 'Utente inseritore',
+  `ins_ip` varchar(16) DEFAULT NULL COMMENT 'Indirizzo ip di inserimento',
+  `ins_data` datetime DEFAULT NULL COMMENT 'Data ora inserimento',
+  PRIMARY KEY (`id_accesso_esa`),
+  KEY `id_esame` (`id_esame`),
+  KEY `id_acc_dett` (`id_acc_dett`),
+  KEY `id_rich_acc` (`id_rich_acc`),
+  KEY `id_rich_acc_dett` (`id_rich_acc_dett`),
+  KEY `ins_uid` (`ins_uid`),
+  KEY `id_accesso` (`id_accesso`)
+) ENGINE=MyISAM AUTO_INCREMENT=1317684 DEFAULT CHARSET=latin1;
+
+
+-- emergencyroom.ps_accessi_farm definition
+
+CREATE TABLE `ps_accessi_farm` (
+  `id_farmaco` bigint unsigned NOT NULL AUTO_INCREMENT COMMENT 'Autoincrement farmaco',
+  `id_accesso` bigint unsigned DEFAULT NULL COMMENT 'Id accesso associato',
+  `id_articolo` int unsigned DEFAULT NULL COMMENT 'Id articolo collegato',
+  `qnt` tinyint DEFAULT NULL COMMENT 'Quantita farmaco somministrata',
+  `rich_uid` varchar(20) DEFAULT NULL COMMENT 'Utente richiedente somministrazione',
+  `rich_data` datetime DEFAULT NULL COMMENT 'Data richiesta somministrazione',
+  `rich_note` varchar(255) DEFAULT NULL COMMENT 'Note richiesta',
+  `rich_ins_data` datetime DEFAULT NULL COMMENT 'Data inserimento richiesta',
+  `rich_ins_ip` varchar(15) DEFAULT NULL COMMENT 'Ip inserimento richiesta',
+  `rich_somm` varchar(20) DEFAULT NULL COMMENT 'Somministratore richiesto',
+  `somm_uid` varchar(20) DEFAULT NULL COMMENT 'Utente somministratore',
+  `somm_data` datetime DEFAULT NULL COMMENT 'Data di somministrazione',
+  `somm_note` varchar(255) DEFAULT NULL COMMENT 'Note conferma somministrazione',
+  `somm_ins_ip` varchar(16) DEFAULT NULL COMMENT 'Ip conferma somministrazione',
+  `somm_ins_data` datetime DEFAULT NULL COMMENT 'Data conferma somministrazione',
+  `rifiutato` tinyint unsigned DEFAULT '0' COMMENT 'Flag rifiuto somministrazione farmaco',
+  `annullato` tinyint unsigned DEFAULT '0' COMMENT 'Flag somministrazione farmaco annullata',
+  PRIMARY KEY (`id_farmaco`),
+  KEY `id_accesso` (`id_accesso`),
+  KEY `id_articolo` (`id_articolo`),
+  KEY `rich_uid` (`rich_uid`),
+  KEY `somm_uid` (`somm_uid`),
+  KEY `annullato` (`annullato`),
+  KEY `rifiutato` (`rifiutato`)
+) ENGINE=MyISAM AUTO_INCREMENT=142349 DEFAULT CHARSET=latin1;
+
+
+-- emergencyroom.ps_accessi_info definition
+
+CREATE TABLE `ps_accessi_info` (
+  `id_accesso_info` int unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id univoco',
+  `id_info` smallint unsigned DEFAULT NULL COMMENT 'Id info associata',
+  `id_accesso` bigint DEFAULT NULL COMMENT 'Id accesso associato',
+  `descrizione` text COMMENT 'Descrizione info inserita dallo utente',
+  `val_data` date DEFAULT NULL COMMENT 'Data della valutazione',
+  `val_ora` time DEFAULT NULL COMMENT 'Ora della valutazione ',
+  `chiusa` tinyint unsigned DEFAULT '0' COMMENT 'Informazione chiusa e gia rivalutata',
+  `ins_ip` varchar(16) DEFAULT NULL COMMENT 'Ip di inserimento',
+  `ins_uid` varchar(20) DEFAULT NULL COMMENT 'User id inseritore',
+  `ins_data` datetime DEFAULT NULL COMMENT 'Data di inserimento',
+  PRIMARY KEY (`id_accesso_info`),
+  KEY `id_info` (`id_info`),
+  KEY `id_accesso` (`id_accesso`),
+  KEY `ins_uid` (`ins_uid`)
+) ENGINE=MyISAM AUTO_INCREMENT=1472090 DEFAULT CHARSET=latin1;
+
+
+-- emergencyroom.ps_accessi_riv definition
+
+CREATE TABLE `ps_accessi_riv` (
+  `id_rivalutazione` int unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id rivalutazione',
+  `id_accesso` bigint unsigned DEFAULT NULL COMMENT 'Id accesso rivalutazione',
+  `id_triage` tinyint unsigned DEFAULT NULL COMMENT 'Id triage rivalutato',
+  `val_data` date DEFAULT NULL COMMENT 'Data valutazione',
+  `val_ora` time DEFAULT NULL COMMENT 'Ora valutazione',
+  `note` varchar(255) DEFAULT NULL COMMENT 'Note associate rivalutazione',
+  `ins_uid` varchar(20) DEFAULT NULL COMMENT 'Utente rivalutante',
+  `ins_ip` varchar(16) DEFAULT NULL COMMENT 'Ip rivalutazione',
+  `ins_data` datetime DEFAULT NULL COMMENT 'Data rivalutazione',
+  PRIMARY KEY (`id_rivalutazione`),
+  KEY `id_accesso` (`id_accesso`),
+  KEY `id_triage` (`id_triage`),
+  KEY `ins_uid` (`ins_uid`)
+) ENGINE=MyISAM AUTO_INCREMENT=260136 DEFAULT CHARSET=latin1;
+
+
+-- emergencyroom.ps_info definition
+
+CREATE TABLE `ps_info` (
+  `id_info` smallint unsigned NOT NULL AUTO_INCREMENT COMMENT 'Identificativo allergia',
+  `descrizione` varchar(255) DEFAULT NULL COMMENT 'Descrizione della allergia',
+  `note` varchar(255) DEFAULT NULL COMMENT 'Note associata alla allergia',
+  `fase` char(1) DEFAULT 'T' COMMENT 'T = triage A = accettazione',
+  `tipo` varchar(50) DEFAULT NULL COMMENT 'Tipo del campo',
+  `parametri` varchar(255) DEFAULT NULL COMMENT 'Parametri campo',
+  `attivo` tinyint(1) DEFAULT '1' COMMENT 'Flag attivo si no',
+  `righe` tinyint unsigned DEFAULT NULL COMMENT 'Numero righe video',
+  `colonne` tinyint unsigned DEFAULT NULL COMMENT 'Numero colonne video',
+  `obbligatorio` tinyint(1) DEFAULT '0' COMMENT 'Compilazione obbligatoria',
+  `rivalutabile` tinyint unsigned DEFAULT '0' COMMENT 'Evento rivalutabile si/no',
+  `stampa` tinyint unsigned DEFAULT '1' COMMENT 'Campo stampabile si no',
+  `posizione` tinyint unsigned DEFAULT NULL COMMENT 'Posizione della visualizazzione',
+  `valore_def` varchar(255) DEFAULT NULL COMMENT 'Valore di dafault info',
+  `ppi_info` tinyint unsigned DEFAULT '0' COMMENT 'Info da visualizzare solo in modalità accettazione ppi',
+  `obi` tinyint(1) DEFAULT '0' COMMENT 'Flag obi attivo si no',
+  PRIMARY KEY (`id_info`),
+  KEY `attivo` (`attivo`),
+  KEY `fase` (`fase`),
+  KEY `obbligatorio` (`obbligatorio`),
+  KEY `posizione` (`posizione`),
+  KEY `ppi_info` (`ppi_info`)
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
+
+
+-- emergencyroom.ps_tipi_causa definition
+
+CREATE TABLE `ps_tipi_causa` (
+  `id_causa` tinyint unsigned NOT NULL AUTO_INCREMENT COMMENT 'Progressivo causa',
+  `cod_causa` varchar(1) DEFAULT NULL COMMENT 'Codice causa flussi',
+  `cod_emur` varchar(1) DEFAULT NULL COMMENT 'Codice emur associato',
+  `descrizione` varchar(255) DEFAULT NULL COMMENT 'Descrizione della causa prestazione',
+  `attivo` tinyint(1) DEFAULT '1' COMMENT 'Flag attivo si no',
+  PRIMARY KEY (`id_causa`),
+  KEY `attivo` (`attivo`),
+  KEY `cod_causa` (`cod_causa`)
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+
+-- emergencyroom.ps_tipi_erogante definition
+
+CREATE TABLE `ps_tipi_erogante` (
+  `id_erogante` tinyint unsigned NOT NULL AUTO_INCREMENT COMMENT 'Progressivo erogante',
+  `cod_erogante` varchar(2) DEFAULT NULL COMMENT 'Codice flussi ente erogante',
+  `descrizione` varchar(255) DEFAULT NULL COMMENT 'Descrizione dello ente economico erogante',
+  `descr_breve` varchar(50) DEFAULT NULL COMMENT 'Descrizione breve',
+  `attivo` tinyint unsigned DEFAULT '1' COMMENT 'Flag attivo ente erogante si no',
+  `frequenza` smallint unsigned DEFAULT NULL COMMENT 'Frequenza uso',
+  PRIMARY KEY (`id_erogante`),
+  KEY `attivo` (`attivo`),
+  KEY `cod_erogante` (`cod_erogante`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+
+-- emergencyroom.ps_tipi_esenzione definition
+
+CREATE TABLE `ps_tipi_esenzione` (
+  `id_esenzione` tinyint unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id della esenzione',
+  `cod_esenzione` varchar(1) DEFAULT NULL COMMENT 'Codice della esenzione',
+  `descrizione` varchar(350) DEFAULT NULL COMMENT 'Descrizione esenzione',
+  `descr_breve` varchar(75) DEFAULT NULL COMMENT 'Descrizione breve della esenzione',
+  `attivo` tinyint(1) DEFAULT '0' COMMENT 'Flag attivo si/no',
+  PRIMARY KEY (`id_esenzione`),
+  KEY `cod_esenzione` (`cod_esenzione`),
+  KEY `attivo` (`attivo`)
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+
+
+-- emergencyroom.ps_tipi_esito definition
+
+CREATE TABLE `ps_tipi_esito` (
+  `id_esito` tinyint unsigned NOT NULL AUTO_INCREMENT COMMENT 'Progressivo esito',
+  `cod_esito` varchar(1) DEFAULT NULL COMMENT 'Codice flussi esito',
+  `descrizione` varchar(255) DEFAULT NULL COMMENT 'Descrizione esito',
+  `descr_breve` varchar(50) DEFAULT NULL COMMENT 'Descrizione breve esito',
+  `ricovero` tinyint unsigned DEFAULT '0' COMMENT 'Flag richiede ricovero',
+  `attivo` tinyint unsigned DEFAULT '1' COMMENT 'Flag attivo si no',
+  `frequenza` smallint unsigned DEFAULT NULL COMMENT 'Frequenza uso',
+  PRIMARY KEY (`id_esito`),
+  KEY `attivo` (`attivo`),
+  KEY `cod_esito` (`cod_esito`),
+  KEY `ricovero` (`ricovero`)
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+
+
+-- emergencyroom.ps_tipi_mezzo definition
+
+CREATE TABLE `ps_tipi_mezzo` (
+  `id_mezzo` tinyint unsigned NOT NULL AUTO_INCREMENT COMMENT 'Progressivo tipologie mezzi di arrivo',
+  `cod_mezzo` varchar(1) DEFAULT NULL COMMENT 'Codice flussi mezzo di arrivo',
+  `cod_emur` varchar(1) DEFAULT NULL COMMENT 'codice per il flusso EMUR',
+  `descrizione` varchar(255) DEFAULT NULL COMMENT 'Descrizione mezzo',
+  `attivo` tinyint(1) DEFAULT '1' COMMENT 'Flag attivo si-no',
+  PRIMARY KEY (`id_mezzo`),
+  KEY `attivo` (`attivo`),
+  KEY `cod_mezzo` (`cod_mezzo`)
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+
+
+-- emergencyroom.ps_tipi_problema definition
+
+CREATE TABLE `ps_tipi_problema` (
+  `id_problema` tinyint unsigned NOT NULL AUTO_INCREMENT COMMENT 'Progressivo dettaglio',
+  `cod_problema` varchar(6) DEFAULT NULL COMMENT 'Codice flussi problema',
+  `descrizione` varchar(255) DEFAULT NULL COMMENT 'Descrizione problema',
+  `note` varchar(255) DEFAULT NULL COMMENT 'Note aggiuntive',
+  `obbligo_dett` tinyint(1) DEFAULT '0' COMMENT 'Obbligo specificare dettaglio',
+  `attivo` tinyint(1) DEFAULT '1' COMMENT 'Flag attivo si no',
+  PRIMARY KEY (`id_problema`),
+  KEY `attivo` (`attivo`),
+  KEY `cod_problema` (`cod_problema`),
+  KEY `obbligo_dett` (`obbligo_dett`)
+) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
+
+
+-- emergencyroom.ps_tipi_problema_dett definition
+
+CREATE TABLE `ps_tipi_problema_dett` (
+  `id_problema_dett` tinyint unsigned NOT NULL AUTO_INCREMENT COMMENT 'Progressido dettaglio problema',
+  `id_problema` tinyint unsigned DEFAULT NULL COMMENT 'Id dettaglio associato',
+  `cod_problema_dett` varchar(1) DEFAULT NULL COMMENT 'Codice flussi dettaglio problema',
+  `cod_emur` varbinary(1) DEFAULT NULL COMMENT 'Codice emur associato',
+  `descrizione` varchar(255) DEFAULT NULL COMMENT 'Descrizione del dettaglio del problema',
+  `attivo` tinyint unsigned DEFAULT '1' COMMENT 'Flag dettaglio problema attivo si no',
+  PRIMARY KEY (`id_problema_dett`),
+  KEY `attivo` (`attivo`),
+  KEY `cod_problema_dett` (`cod_problema_dett`),
+  KEY `id_problema` (`id_problema`)
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+
+-- emergencyroom.ps_tipi_trasferimento definition
+
+CREATE TABLE `ps_tipi_trasferimento` (
+  `id_trasferimento` tinyint unsigned NOT NULL AUTO_INCREMENT COMMENT 'Progressivo trasferimento',
+  `cod_trasferimento` varchar(1) DEFAULT NULL COMMENT 'Codice flussi trasferimento',
+  `descrizione` varchar(255) DEFAULT NULL COMMENT 'Descrizione del trasferimento',
+  `attivo` tinyint(1) DEFAULT '1' COMMENT 'Flag trasferimento attivo si no',
+  PRIMARY KEY (`id_trasferimento`),
+  KEY `attivo` (`attivo`),
+  KEY `cod_trasferimento` (`cod_trasferimento`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+
+-- emergencyroom.ps_tipi_triage definition
+
+CREATE TABLE `ps_tipi_triage` (
+  `id_triage` tinyint unsigned NOT NULL AUTO_INCREMENT COMMENT 'Progressivo triage',
+  `cod_triage` varchar(1) DEFAULT NULL COMMENT 'Codice flussi triage',
+  `cod_flussi` varchar(1) DEFAULT NULL COMMENT 'Codice del flusso regione sicilia',
+  `id_urgenza` char(1) DEFAULT NULL,
+  `colore` varchar(25) DEFAULT NULL COMMENT 'Descrizione colore',
+  `descrizione` varchar(255) DEFAULT NULL COMMENT 'Descrizione triage',
+  `RGB` varchar(7) DEFAULT NULL COMMENT 'Colore web in rgb del tipo triage',
+  `note` varchar(255) DEFAULT NULL COMMENT 'Note aggiuntive sul triage',
+  `ticket` tinyint unsigned DEFAULT '0' COMMENT 'Flag triage pagante ticket si no',
+  `ppi` tinyint unsigned DEFAULT '0' COMMENT 'Flag ppi attivabile per il tipo di triage',
+  `dimettibile` tinyint unsigned DEFAULT '1' COMMENT 'Flag tipo triage dimmetibile',
+  `attivo` tinyint unsigned DEFAULT '1' COMMENT 'Flag triage attivo si no',
+  PRIMARY KEY (`id_triage`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+
+
+-- emergencyroom.tab_asl definition
+
+CREATE TABLE `tab_asl` (
+  `id_asl` smallint unsigned NOT NULL AUTO_INCREMENT,
+  `codice_regione` varchar(3) DEFAULT NULL,
+  `denominazione_regione` varchar(80) DEFAULT NULL,
+  `codice_asl` varchar(3) DEFAULT NULL,
+  `asl` varchar(255) DEFAULT NULL,
+  `via` varchar(255) DEFAULT NULL,
+  `cap` varchar(5) DEFAULT NULL,
+  `citta` varchar(100) DEFAULT NULL,
+  `id_provincia` varchar(2) DEFAULT NULL,
+  `telefono` varchar(30) DEFAULT NULL,
+  `fax` varchar(30) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `attiva` tinyint unsigned DEFAULT '1' COMMENT 'Flag asl attiva si no',
+  `id_asl_dip` smallint unsigned DEFAULT '0' COMMENT 'ID asl che può fare riferimento anche a questa asl',
+  PRIMARY KEY (`id_asl`),
+  KEY `codice_asl` (`codice_asl`),
+  KEY `codice_regione` (`codice_regione`),
+  KEY `citta` (`citta`),
+  KEY `id_provincia` (`id_provincia`),
+  KEY `attiva` (`attiva`),
+  KEY `id_asl_dip` (`id_asl_dip`)
+) ENGINE=MyISAM AUTO_INCREMENT=342 DEFAULT CHARSET=latin1;
+
+
+-- emergencyroom.tab_diagnosi definition
+
+CREATE TABLE `tab_diagnosi` (
+  `id_diagnosi` smallint unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id della diagnosi',
+  `id_diagnosi_cat` smallint DEFAULT NULL COMMENT 'Id della categoria della diagnosi',
+  `codice` varchar(5) DEFAULT NULL COMMENT 'Codice mnemonico della diagnosi',
+  `descrizione` varchar(255) DEFAULT NULL COMMENT 'Descrizione della diagnosi ',
+  `sesso` varchar(1) DEFAULT NULL COMMENT 'Campo riportato per uniformita,da controllare il suo usa',
+  `eta` varchar(1) DEFAULT NULL COMMENT 'Campo riportato per uniformita,da controllare il suo usa',
+  `eta_sec` varchar(1) DEFAULT NULL COMMENT 'Campo riportato per uniformita,da controllare il suo usa',
+  `frequenza` smallint unsigned DEFAULT '0' COMMENT 'Frequenza selezione diagnosi',
+  `fittizia` tinyint unsigned DEFAULT '0' COMMENT 'Flag diagnosi di tipo fittizia',
+  `attiva` tinyint unsigned DEFAULT '1' COMMENT 'Flag diagnosi attiva si no',
+  PRIMARY KEY (`id_diagnosi`),
+  KEY `descrizione` (`descrizione`),
+  KEY `id_diagnosi_cat` (`id_diagnosi_cat`),
+  KEY `codice` (`codice`),
+  KEY `attiva` (`attiva`)
+) ENGINE=MyISAM AUTO_INCREMENT=36172 DEFAULT CHARSET=latin1;
+
+
+-- emergencyroom.tab_istituti definition
+
+CREATE TABLE `tab_istituti` (
+  `id_istituto` smallint unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id univoco istituto',
+  `cod_regione` varchar(255) DEFAULT NULL COMMENT 'Codice regione',
+  `codice` varchar(255) DEFAULT NULL COMMENT 'Codice struttura',
+  `denominazione` varchar(255) DEFAULT NULL COMMENT 'Denominazione struttura',
+  `indirizzo` varchar(255) DEFAULT NULL COMMENT 'Indirizzo',
+  `cap` char(5) DEFAULT NULL COMMENT 'Cap',
+  `comune` varchar(255) DEFAULT NULL COMMENT 'Comune',
+  `provincia` varchar(255) DEFAULT NULL COMMENT 'Provincia',
+  `telefono` varchar(25) DEFAULT NULL COMMENT 'Numero di telefono istituto',
+  `apertura_giorno` varchar(2) DEFAULT NULL COMMENT 'Giorno apertura struttura',
+  `apertura_mese` varchar(2) DEFAULT NULL COMMENT 'Mese aprtura struttura',
+  `apertura_anno` varchar(4) DEFAULT NULL COMMENT 'Anno di apertura della struttura',
+  `tipo` char(2) DEFAULT NULL COMMENT 'Tipo struttura PR = privata PU = pubblica',
+  `attivo` tinyint unsigned DEFAULT '1' COMMENT 'Flag istituto attivo',
+  PRIMARY KEY (`id_istituto`),
+  KEY `attivo` (`attivo`),
+  KEY `cod_regione` (`cod_regione`),
+  KEY `codice` (`codice`),
+  KEY `comune` (`comune`),
+  KEY `provincia` (`provincia`)
+) ENGINE=MyISAM AUTO_INCREMENT=4398 DEFAULT CHARSET=latin1;
+
+
+-- emergencyroom.tab_regioni definition
+
+CREATE TABLE `tab_regioni` (
+  `id_regione` tinyint unsigned NOT NULL AUTO_INCREMENT COMMENT 'Id univoco della provincia',
+  `cod_istat` varchar(3) DEFAULT NULL COMMENT 'Codice istat regione',
+  `cod_ministero` varchar(5) DEFAULT NULL COMMENT 'Codice ministero',
+  `regione` varchar(50) DEFAULT NULL COMMENT 'Descrizione della regione',
+  PRIMARY KEY (`id_regione`),
+  KEY `cod_ministero` (`cod_ministero`)
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
+
+
+-- emergencyroom.tab_stati definition
+
+CREATE TABLE `tab_stati` (
+  `id_stato` smallint unsigned NOT NULL AUTO_INCREMENT,
+  `stato` varchar(255) DEFAULT NULL,
+  `codice` varchar(3) DEFAULT NULL,
+  `codice_alfa2` varchar(2) DEFAULT NULL COMMENT 'Codice formato alfa 2 (2 caratteri)',
+  `old_stato` tinyint unsigned DEFAULT '0',
+  PRIMARY KEY (`id_stato`)
+) ENGINE=MyISAM AUTO_INCREMENT=204 DEFAULT CHARSET=latin1;
+
+
+-- emergencyroom.view_verbali definition
+
+CREATE TABLE `view_verbali` (
+  `colore` varchar(25) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Descrizione colore',
+  `id_accesso` bigint unsigned NOT NULL COMMENT 'Identificativo accesso',
+  `nome` varchar(30) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Nome paziente',
+  `cognome` varchar(30) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Cognome paziente',
+  `cod_fisc` varchar(16) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Codice fiscale paziente',
+  `data_nascita` date DEFAULT NULL COMMENT 'Data nascita paziente',
+  `problema_accesso` varchar(255) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Descrizione problema',
+  `data_accesso` date DEFAULT NULL COMMENT 'Data registrazione accesso',
+  `ora_accesso` time DEFAULT NULL COMMENT 'Ora registrazione accesso',
+  `data_dimissione` date DEFAULT NULL COMMENT 'Data dimissione',
+  `ora_dimissione` time DEFAULT NULL COMMENT 'Ora dimissione',
+  `diagnosi` varchar(255) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Descrizione della diagnosi ',
+  `esito` varchar(255) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Descrizione esito',
+  `sesso` char(1) CHARACTER SET latin1 DEFAULT NULL COMMENT 'Sesso paziente'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+-- emergencyroom.web_reparti definition
+
+CREATE TABLE `web_reparti` (
+  `id` tinyint unsigned NOT NULL AUTO_INCREMENT,
+  `cod_reparto` varchar(4) DEFAULT NULL COMMENT 'Codice identificativo del reparto tratto dal flowlock',
+  `reparto` varchar(100) NOT NULL,
+  `reparto_breve` varchar(50) DEFAULT NULL COMMENT 'Descrizione del reparto abbreviato',
+  `reparto_sigla` varchar(5) DEFAULT NULL,
+  `interno` tinyint unsigned NOT NULL DEFAULT '1',
+  `progressivo` int unsigned DEFAULT '0',
+  `dipendenza` tinyint unsigned DEFAULT '0',
+  `direttore` varchar(50) DEFAULT NULL,
+  `urg_default` varchar(1) DEFAULT '-',
+  `branca1` tinyint unsigned DEFAULT '8',
+  `branca2` tinyint unsigned DEFAULT '0',
+  `branca3` tinyint unsigned DEFAULT '0',
+  `branca4` tinyint unsigned DEFAULT '0',
+  `branca5` tinyint unsigned DEFAULT '0',
+  `attivo` tinyint(1) DEFAULT '1' COMMENT 'Reparto attivo si no',
+  `fittizio` tinyint(1) DEFAULT '0' COMMENT 'reparto fittizio si no',
+  `vedi_esa_altri_rep` tinyint unsigned DEFAULT '0',
+  `sesso` enum('X','M','F') DEFAULT 'X' COMMENT 'Sesso accesso al reparto',
+  `condizione` enum('X','=','>','<') DEFAULT 'X' COMMENT 'Condizione per lo accesso al reparto',
+  `eta` tinyint DEFAULT NULL COMMENT 'Eta accesso al reparto',
+  `id_uo` tinyint unsigned DEFAULT '1' COMMENT 'Unità operativa (taormina)',
+  `sottoreparto` tinyint unsigned DEFAULT '0' COMMENT 'flag che indica se questo reparto viene utilizzato esclusivamente come sottoreparto',
+  `drg_standard` smallint unsigned DEFAULT NULL COMMENT 'Id del drg standard associato al reparto',
+  `drg_colonna_dh` varchar(50) DEFAULT NULL COMMENT 'Colonna di riferimento nella lettura del prezzo per il reparto - tipo day hospital',
+  `drg_colonna_ord` varchar(50) DEFAULT NULL COMMENT 'Colonna di riferimento nella lettura del prezzo per il reparto - tipo ordinario',
+  `obb_data_ep_acuto` tinyint unsigned DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `reparto` (`reparto`),
+  KEY `attivo` (`attivo`),
+  KEY `id_uo` (`id_uo`),
+  KEY `id_drg_standard` (`drg_standard`)
+) ENGINE=MyISAM AUTO_INCREMENT=125 DEFAULT CHARSET=latin1;
+
+
+-- emergencyroom.web_utenti definition
+
+CREATE TABLE `web_utenti` (
+  `nome` varchar(20) NOT NULL,
+  `cognome` varchar(20) NOT NULL,
+  `cod_fisc` varchar(16) NOT NULL,
+  `uid` varchar(20) NOT NULL,
+  `pwd` varchar(32) NOT NULL,
+  `profilo` tinyint unsigned NOT NULL DEFAULT '0',
+  `tel_int` varchar(20) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `tel_pri` varchar(20) NOT NULL,
+  `tel_cel` varchar(20) NOT NULL,
+  `ruolo` varchar(50) NOT NULL,
+  `cod_enpam` varchar(11) DEFAULT NULL,
+  `cod_reg` varchar(10) DEFAULT NULL,
+  `viewer` tinyint unsigned NOT NULL DEFAULT '0',
+  `tipo_viewer` tinyint unsigned DEFAULT '0',
+  `ris` tinyint unsigned NOT NULL DEFAULT '0',
+  `zeus` tinyint unsigned NOT NULL DEFAULT '0',
+  `pda` tinyint unsigned NOT NULL DEFAULT '0',
+  `allegati` tinyint unsigned NOT NULL DEFAULT '0',
+  `vis_eseguiti` tinyint unsigned NOT NULL DEFAULT '0',
+  `reparto` tinyint unsigned NOT NULL DEFAULT '0',
+  `refertante` tinyint unsigned NOT NULL DEFAULT '0',
+  `sms` tinyint DEFAULT '0' COMMENT 'Invio sms',
+  `anonimizza` tinyint unsigned NOT NULL DEFAULT '0',
+  `ses_timeout` tinyint unsigned NOT NULL DEFAULT '60',
+  `ext_login` tinyint NOT NULL DEFAULT '1',
+  `pwd_data` date DEFAULT NULL,
+  `firma_rigo1` varchar(50) DEFAULT NULL,
+  `firma_rigo2` varchar(50) DEFAULT NULL,
+  `firma_rigo3` varchar(50) DEFAULT NULL,
+  `stato_account` tinyint unsigned DEFAULT '1',
+  `firma_digitale` set('B','R') DEFAULT NULL,
+  `pwd_messaggi` tinyint unsigned DEFAULT '0',
+  `id_magazzino` tinyint unsigned DEFAULT '0',
+  `lettere_rif` varchar(3) DEFAULT NULL,
+  `mag_firma_rigo1` varchar(30) DEFAULT NULL,
+  `mag_firma_rigo2` varchar(30) DEFAULT NULL,
+  `mod_anagrafica` tinyint unsigned DEFAULT '0' COMMENT 'Flag permesso modifica anagrafica',
+  `db_download` tinyint unsigned DEFAULT '0' COMMENT 'Flag invio mail notifica download backup database',
+  `riepilogo` tinyint unsigned DEFAULT '1' COMMENT 'Flag che abilitato permette di visualizzare la colonna dei riepilogo',
+  `statistiche` tinyint unsigned DEFAULT '1' COMMENT 'Flag che abilitato permette di visualizzare il pulsante delle statistiche',
+  `id_domanda` tinyint unsigned DEFAULT NULL COMMENT 'Id del tipo di domanda per il recupero della password',
+  `risp_domanda` varchar(255) DEFAULT NULL COMMENT 'Risposta alla domanda segreta',
+  `mod_fattura` tinyint unsigned DEFAULT '0' COMMENT 'Flag che abilitato permette la modifica della fattura',
+  `mod_cartella_clinica` tinyint unsigned DEFAULT '0' COMMENT 'Flag modifica cartella clinica concesso',
+  `medico_ppi` tinyint unsigned DEFAULT '0' COMMENT 'Flag medico ppi si no',
+  `blocco_accesso` tinyint unsigned DEFAULT '0' COMMENT 'Flag controllo blocco accesso per blocco sistema',
+  `id_lingua` tinyint unsigned DEFAULT '1' COMMENT 'Id associato alla lingua dell\\''utente',
+  `perm_pers` tinyint DEFAULT '0' COMMENT 'flag che indica se lo utente ha dei permessi speciali(in piu o in meno)',
+  `storico` tinyint unsigned DEFAULT '2' COMMENT 'Accesso allo storico 0 = no, 1 = privato, 2 = pubblico',
+  `contabilita_sdo` tinyint unsigned DEFAULT '0' COMMENT 'Accesso alla contabilità della sdo',
+  `provenienza` tinyint unsigned DEFAULT '0',
+  `id_modello` smallint unsigned DEFAULT '0' COMMENT 'id associato al modello di permessi creato',
+  `data_creazione` datetime DEFAULT NULL COMMENT 'data creazione account',
+  `data_modifica` datetime DEFAULT NULL COMMENT 'data ultima modifica dell utente',
+  `blocco_sconto` tinyint unsigned DEFAULT '1',
+  `cancella_esami_ref` tinyint unsigned DEFAULT '0',
+  `lab_ref_log` tinyint unsigned DEFAULT '0' COMMENT 'Laboratorio di analisi, visualizzazione dei log di modifica referto si no',
+  `referti_propri` tinyint unsigned DEFAULT '0' COMMENT 'vede solo i propri referti o no',
+  `annulla_consegna` tinyint unsigned DEFAULT '0',
+  `cartella_stampa` tinyint unsigned DEFAULT '0',
+  `elimina_dimissione` tinyint unsigned DEFAULT '1',
+  `cc_prescr_farm_pwd` tinyint unsigned DEFAULT '1',
+  `utente_cassa` tinyint unsigned DEFAULT '0' COMMENT 'utente che ha gestione cassa avanzata',
+  `modifica_agenda` tinyint unsigned DEFAULT '0',
+  PRIMARY KEY (`uid`),
+  KEY `id_lingua` (`id_lingua`),
+  KEY `profilo` (`profilo`),
+  KEY `reparto` (`reparto`),
+  KEY `id_modello` (`id_modello`),
+  KEY `refertante` (`refertante`),
+  KEY `stato_account` (`stato_account`),
+  KEY `blocco_sconto` (`blocco_sconto`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+INSERT INTO portaleps.archive
+(database_type, name, password, url, username)
+VALUES('mysql', 'The Royal London Hospital', 'password', 'localhost:3306/emergency_room_db_1', 'root');
+
+INSERT INTO portaleps.archive
+(database_type, name, password, url, username)
+VALUES('mysql', 'St Mary\'s Hospital', 'password', 'localhost:3306/emergency_room_db_1', 'root');
+
+INSERT INTO portaleps.archive
+(database_type, name, password, url, username)
+VALUES('mysql', 'Royal Free Hospital', 'password', 'localhost:3306/emergency_room_db_1', 'root');
+
+INSERT INTO portaleps.archive
+(database_type, name, password, url, username)
+VALUES('mysql', 'St Thomas\' Hospital', 'password', 'localhost:3306/emergency_room_db_1', 'root');
+
+INSERT INTO portaleps.user_archive (id, archive_id, user_id) VALUES(1, 1, 1);
+
+INSERT INTO portaleps.user_archive (id, archive_id, user_id) VALUES(2, 2, 1);
+
+INSERT INTO portaleps.user_archive (id, archive_id, user_id) VALUES(3, 3, 1);
+
+INSERT INTO portaleps.user_archive (id, archive_id, user_id) VALUES(4, 4, 1);
+
+CREATE TABLE view_verbali AS (SELECT ptt.colore, pa.id_accesso, paa.nome, paa.cognome, paa.cod_fisc, paa.data_nascita as data_nascita, ptp.descrizione AS problema_accesso, pa.data_acc AS data_accesso, pa.ora_acc AS ora_accesso, padim.data_dim AS data_dimissione, padim.ora_dim AS ora_dimissione, td.descrizione AS diagnosi, pte.descrizione AS esito, paa.sesso as sesso FROM ps_accessi pa LEFT JOIN ps_tipi_triage ptt ON pa.id_triage_ingresso = ptt.id_triage LEFT JOIN ps_accessi_ana paa ON pa.id_accesso = paa.id_accesso LEFT JOIN ps_accessi_dim padim ON pa.id_accesso = padim.id_accesso LEFT JOIN ps_tipi_problema ptp ON pa.id_problema = ptp.id_problema LEFT JOIN ps_accessi_diagn padiagn ON pa.id_accesso = padiagn.id_accesso LEFT JOIN tab_diagnosi td ON td.id_diagnosi = padiagn.id_diagnosi LEFT JOIN ps_tipi_esito pte ON padim.id_esito = pte.id_esito);
